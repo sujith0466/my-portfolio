@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanisetty Sujith Kumar - AI & Data Science Portfolio</title>
+    <link rel="icon" href="https://placehold.co/32x32/3b82f6/ffffff?text=SK" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS Variables for consistent theming */
+        :root {
+            --primary-color: #3b82f6; /* Blue-500 */
+            --secondary-color: #8b5cf6; /* Violet-500 */
+            --tertiary-color: #10b981; /* Emerald-500 */
+            --text-color-dark: #1f2937; /* Gray-800 */
+            --text-color-light: #4b5563; /* Gray-600 */
+            --bg-light: #f9fafb; /* Gray-50 */
+            --bg-dark: #111827; /* Gray-900 */
+        }
+
+        /* Base styles for smooth scrolling and font */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+            background-color: var(--bg-light);
+            color: var(--text-color-dark);
+        }
+
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Gradient Background Effect */
+        .gradient-bg {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        /* Navigation Link Underline Hover Effect */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Project Card Hover Effect with Gradient Overlay */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure content is above pseudo-element */
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1)); /* Light gradient overlay */
+            transform: translateY(100%); /* Start off-screen below */
+            transition: transform 0.5s ease;
+            z-index: -1; /* Place behind content */
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        .project-card:hover::before {
+            transform: translateY(0); /* Slide overlay into view */
+        }
+
+        /* Skill Pill Hover Effect */
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-5px); /* Lift pill on hover */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+            background: linear-gradient(90deg, #e0e7ff, #dbeafe); /* Light blue gradient */
+        }
+
+        /* Scroll Reveal Animation */
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating Animation for Profile Picture */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Pulse Animation (if needed, currently not explicitly used on an element) */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Skill Progress Bar Animation */
+        .progress-bar {
+            position: relative;
+            overflow: hidden;
+            background-color: #e5e7eb; /* Gray-200 */
+            border-radius: 9999px; /* Full rounded */
+            height: 8px; /* Height of the bar */
+            width: 100%;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0; /* Start at 0 width */
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            animation: progress-animation 2s ease forwards; /* Animation trigger */
+            border-radius: 9999px;
+            transform-origin: left; /* Ensure animation grows from left */
+        }
+
+        /* Keyframe for progress bar fill */
+        @keyframes progress-animation {
+            to { width: var(--progress-width); } /* Uses CSS variable for dynamic width */
+        }
+
+        /* Typing Effect for Subtitle */
+        .typing-effect {
+            border-right: 3px solid; /* Blinking cursor effect */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            width: 0; /* Start with 0 width for typing effect */
+        }
+
+        /* Keyframes for typing and blinking cursor */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary-color) }
+        }
+
+        /* Particle Effect for Project Card Headers (JS controlled) */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(139, 92, 246, 0.3); /* Semi-transparent violet */
+            pointer-events: none; /* Ensure particles don't block clicks */
+            opacity: 0; /* Start hidden */
+            animation: fade-out-particle 2s forwards; /* Fade out after creation */
+        }
+
+        @keyframes fade-out-particle {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(0); }
+        }
+
+        /* Tech Icon Hover Effect */
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: rotate(10deg) scale(1.2); /* Rotate and scale on hover */
+        }
+
+        /* Card Hover Effect (General, applied to project cards) */
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-5px); /* Lift card */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        /* Button Shine Effect */
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure button content is above shine effect */
+        }
+
+        .btn-hover-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%; /* Start off-screen left */
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0)); /* White gradient for shine */
+            transition: left 0.5s ease;
+            z-index: -1; /* Place behind button content */
+        }
+
+        .btn-hover-effect:hover::before {
+            left: 100%; /* Slide shine across to the right */
+        }
+
+        /* Rotating Border for Personal Info Card */
+        .rotating-border {
+            position: relative;
+            padding: 3px; /* Space for the border */
+            border-radius: 0.75rem; /* Match Tailwind's rounded-xl */
+            background-color: #ffffff; /* Background for the card itself */
+            overflow: hidden; /* Hide overflow of the pseudo-element */
+        }
+
+        .rotating-border::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 2px solid transparent; /* Transparent border to define shape */
+            border-radius: inherit; /* Inherit border-radius from parent */
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--tertiary-color), var(--primary-color)) border-box; /* Gradient for the border */
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); /* Mask to create border effect */
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            animation: rotate 4s linear infinite; /* Rotation animation */
+            z-index: -1; /* Place behind content */
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Animated Background Blobs (JS controlled) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: blob-animation 15s infinite ease-in-out alternate;
+        }
+
+        @keyframes blob-animation {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(20vw, 10vh) scale(1.1); }
+            50% { transform: translate(-15vw, 30vh) scale(0.9); }
+            75% { transform: translate(10vw, -20vh) scale(1.2); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        /* Input Focus Effect */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: transparent; /* Remove default border */
+            box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 4px var(--secondary-color); /* Gradient-like focus ring */
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* NEW: CTA Button Initial Pop Animation */
+        .btn-pop-on-load {
+            animation: popIn 0.6s ease-out 0.5s forwards; /* 0.5s delay to appear after page load */
+            opacity: 0; /* Start hidden */
+            transform: scale(0.8); /* Start smaller */
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            60% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* NEW: Project Image Zoom on Hover */
+        .project-image-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image-zoom {
+            transform: scale(1.05); /* Slightly zoom the image */
+        }
+
+        /* NEW: Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* NEW: Header Shadow on Scroll */
+        .header-shadow {
+            transition: box-shadow 0.3s ease;
+        }
+        .header-shadow.scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+
+        <div id="blob-container" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+        <header id="main-header" class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50 header-shadow">
+            <nav class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/40x40/3b82f6/ffffff?text=SK" alt="Logo" class="rounded-full">
+                    <h1 class="text-2xl font-bold gradient-text">Sanisetty Sujith Kumar</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Home</a>
+                    <a href="#about" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">About</a>
+                    <a href="#projects" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Projects</a>
+                    <a href="#skills" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Skills</a>
+                    <a href="#activities" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Activities</a>
+                    <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6">
+                <button id="close-menu-button" class="absolute top-6 right-6 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="#home" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+                <a href="#about" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+                <a href="#projects" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+                <a href="#skills" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
+                <a href="#activities" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Activities</a>
+                <a href="#contact" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            </div>
+        </header>
+
+        <section id="home" class="relative flex-grow flex items-center justify-center py-16 md:py-24 px-6 md:px-12 bg-gradient-to-r from-blue-50 to-violet-50 overflow-hidden">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 text-center md:text-left z-10">
+                <div class="flex-1 max-w-2xl section-fade">
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fade-in">
+                        Hi, I'm <span class="gradient-text">Sanisetty Sujith Kumar</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl font-semibold text-gray-700 mb-6 typing-effect">
+                        B.Tech Student in AI & Data Science
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                        Passionate about leveraging AI and data science to solve real-world problems.
+                        Exploring the intersection of machine learning, data analytics, and innovative technology.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold text-lg shadow-lg hover:bg-blue-700 transition duration-300 btn-hover-effect btn-pop-on-load">
+                             Get in Touch
+                        </a>
+                        <a href="#projects" class="px-8 py-3 rounded-full border-2 border-blue-600 text-blue-600 font-semibold text-lg hover:bg-blue-50 transition duration-300 btn-hover-effect btn-pop-on-load">
+                             View Projects
+                        </a>
+                    </div>
+                    <div class="flex justify-center md:justify-start space-x-6 mt-8">
+                        <a href="https://www.linkedin.com/in/sujith-kumar-802059298/" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 tech-icon">
+                            <img src="https://placehold.co/32x32/ffffff/0077B5?text=LI" alt="LinkedIn" class="w-8 h-8 rounded-full">
+                        </a>
+                        <a href="https://github.com/sujith0466" target="_blank" class="text-gray-600 hover:text-violet-600 transition duration-300 tech-icon">
+                            <img src="https://placehold.co/32x32/ffffff/181717?text=GH" alt="GitHub" class="w-8 h-8 rounded-full">
+                        </a>
+                        <a href="mailto:sujithsunil4818@gmail.com" class="text-gray-600 hover:text-emerald-600 transition duration-300 tech-icon">
+                            <img src="https://placehold.co/32x32/ffffff/D14836?text=EM" alt="Email" class="w-8 h-8 rounded-full">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1 flex justify-center md:justify-end section-fade">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden floating p-2">
+                        <img src="https://i.ibb.co/Z65ZmGqy/picofme1.png" alt="Sanisetty Sujith Kumar" class="w-full h-full object-cover rounded-full border-4 border-blue-200">                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 px-6 md:px-12 bg-white">
+            <div class="container mx-auto section-fade">
+                <h2 class="text-4xl font-bold text-center gradient-text mb-12">About Me</h2>
+
+                <div class="flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16">
+                    <div class="w-full lg:w-1/3 bg-gray-50 p-8 rounded-xl shadow-lg rotating-border">
+                        <div class="flex items-center mb-6">
+                            <img src="https://i.ibb.co/Z65ZmGqy/picofme1.png" alt="Personal Info Icon" class="w-12 h-12 mr-4 rounded-full object-cover">
+                            <h3 class="text-2xl font-semibold text-gray-900">Personal Info</h3>
+                        </div>
+                        <ul class="space-y-4 text-lg text-gray-700">
+                            <li><strong class="text-gray-900">Name:</strong> Sanisetty Sujith Kumar</li>
+                            <li><strong class="text-gray-900">Degree:</strong> B.Tech in AI & Data Science</li>
+                            <li><strong class="text-gray-900">Email:</strong> sujithsunil4818@gmail.com</li>
+                            <li><strong class="text-gray-900">Location:</strong> India</li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 space-y-6 text-lg text-gray-700">
+                        <h3 class="text-3xl font-semibold text-gray-900 mb-4">Who I Am</h3>
+                        <p>
+                            I'm Sujith Kumar, a B.Tech student specializing in Artificial Intelligence and Data Science. My academic journey has equipped me with a strong foundation in machine learning algorithms, data analysis, and software development.
+                        </p>
+                        <p>
+                            I'm passionate about applying AI solutions to real-world problems and continuously expanding my knowledge in this rapidly evolving field. My goal is to contribute to innovative projects that leverage data-driven insights to create meaningful impact.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <span class="skill-pill px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium shadow-sm">Machine Learning</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-purple-100 text-purple-800 font-medium shadow-sm">Data Analysis</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-green-100 text-green-800 font-medium shadow-sm">Python</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-red-100 text-red-800 font-medium shadow-sm">Deep Learning</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 font-medium shadow-sm">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 md:py-24 px-6 md:px-12 bg-gray-50">
+            <div class="container mx-auto section-fade">
+                <h2 class="text-4xl font-bold text-center gradient-text mb-6">Projects</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                    Here are some of the projects I've worked on during my academic journey.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Hackathon" alt="Hackathon Participant" class="w-full h-full object-cover project-image-zoom">
+                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Hackathon Participant</h3>
+                        <p class="text-gray-700 mb-4">
+                            Participated in a 24-hour hackathon focused on AI and web development, enhancing problem-solving and teamwork.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium tech-icon">AI</span>
+                            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium tech-icon">Web Dev</span>
+                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium tech-icon">Teamwork</span>
+                        </div>
+                        <a href="https://github.com/sujith0466/OP_generator" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
+                            View Project
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <img src="https://placehold.co/400x200/8b5cf6/ffffff?text=Workshop" alt="DL, DS & ML Workshop" class="w-full h-full object-cover project-image-zoom">
+                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Workshop on DL, DS & ML</h3>
+                        <p class="text-gray-700 mb-4">
+                            Attended a 3-day workshop covering fundamentals of Deep Learning, Data Science, and Machine Learning.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">Deep Learning</span>
+                            <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-sm font-medium tech-icon">Data Science</span>
+                            <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium tech-icon">Machine Learning</span>
+                        </div>
+                        <a href="https://example.com/workshop-details" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
+                            View Details
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <img src="https://placehold.co/400x200/10b981/ffffff?text=C+Programming" alt="C Programming Course" class="w-full h-full object-cover project-image-zoom">
+                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">C Programming Course</h3>
+                        <p class="text-gray-700 mb-4">
+                            Learned core concepts like loops, arrays, pointers, and functions, building small C programs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium tech-icon">C Language</span>
+                            <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium tech-icon">Algorithms</span>
+                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">Data Structures</span>
+                        </div>
+                        <a href="https://github.com/your-github/c-projects-link" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
+                            View Projects
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Study+Buddy" alt="Study Buddy App" class="w-full h-full object-cover project-image-zoom">
+                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Study Buddy App</h3>
+                        <p class="text-gray-700 mb-4">
+                            A collaborative study platform allowing users to find study partners, create groups, and share resources.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium tech-icon">React</span>
+                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium tech-icon">Firebase</span>
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium tech-icon">Tailwind CSS</span>
+                        </div>
+                        <a href="https://github.com/sujith0466/Study_Buddy" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
+                            View Project
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <img src="https://placehold.co/400x200/10b981/ffffff?text=Dashboard" alt="Data Visualization Dashboard" class="w-full h-full object-cover project-image-zoom">
+                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Data Visualization Dashboard</h3>
+                        <p class="text-gray-700 mb-4">
+                            Interactive dashboard built to visualize complex datasets, providing actionable insights for business intelligence.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium tech-icon">D3.js</span>
+                            <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium tech-icon">React</span>
+                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">PostgreSQL</span>
+                        </div>
+                        <a href="https://github.com/sujith0466" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
+                            View Project
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="https://github.com/sujith0466?tab=repositories" target="_blank" class="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold text-lg shadow-lg hover:bg-blue-700 transition duration-300 btn-hover-effect">
+                        View All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 md:py-24 px-6 md:px-12 bg-white">
+            <div class="container mx-auto section-fade">
+                <h2 class="text-4xl font-bold text-center gradient-text mb-6">Skills</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                    Here are the technologies and tools I've worked with.
+                </p>
+
+                <div class="flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:space-x-16">
+                    <div class="w-full lg:w-1/2 bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/48x48/3b82f6/ffffff?text=🛠️" alt="Technical Skills Icon" class="w-12 h-12 mr-4">
+                            <h3 class="text-2xl font-semibold text-gray-900">Technical Skills</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-gray-800">Python</span>
+                                    <span class="text-lg font-medium text-gray-800">90%</span>
+                                </div>
+                                <div class="progress-bar" style="--progress-width: 90%;"></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-gray-800">Machine Learning</span>
+                                    <span class="text-lg font-medium text-gray-800">85%</span>
+                                </div>
+                                <div class="progress-bar" style="--progress-width: 85%;"></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-gray-800">Data Analysis</span>
+                                    <span class="text-lg font-medium text-gray-800">80%</span>
+                                </div>
+                                <div class="progress-bar" style="--progress-width: 80%;"></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-gray-800">Deep Learning</span>
+                                    <span class="text-lg font-medium text-gray-800">75%</span>
+                                </div>
+                                <div class="progress-bar" style="--progress-width: 75%;"></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-gray-800">Web Development</span>
+                                    <span class="text-lg font-medium text-gray-800">70%</span>
+                                </div>
+                                <div class="progress-bar" style="--progress-width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/48x48/8b5cf6/ffffff?text=⚙️" alt="Tools Icon" class="w-12 h-12 mr-4">
+                            <h3 class="text-2xl font-semibold text-gray-900">Tools & Frameworks</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-pill px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium shadow-sm">TensorFlow</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-purple-100 text-purple-800 font-medium shadow-sm">PyTorch</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-green-100 text-green-800 font-medium shadow-sm">scikit-learn</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 font-medium shadow-sm">Pandas</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-red-100 text-red-800 font-medium shadow-sm">NumPy</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 font-medium shadow-sm">Matplotlib</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-teal-100 text-teal-800 font-medium shadow-sm">SQL</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-gray-100 text-gray-800 font-medium shadow-sm">Git</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-purple-100 text-purple-800 font-medium shadow-sm">HTML/CSS</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-green-100 text-green-800 font-medium shadow-sm">JavaScript</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 font-medium shadow-sm">Jupyter</span>
+                            <span class="skill-pill px-4 py-2 rounded-full bg-red-100 text-red-800 font-medium shadow-sm">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="py-16 md:py-24 px-6 md:px-12 bg-gray-50">
+            <div class="container mx-auto section-fade">
+                <h2 class="text-4xl font-bold text-center gradient-text mb-6">Activities</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                    Beyond academics, I'm involved in various extracurricular activities and initiatives.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/48x48/3b82f6/ffffff?text=🤖" alt="AI Club Icon" class="w-12 h-12 mr-4">
+                            <h3 class="text-2xl font-semibold text-gray-900">AI Student Club</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Active member of the university's AI club, organizing workshops and hackathons to promote AI education among peers.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Organized 3 workshops on AI fundamentals.</li>
+                            <li>Co-led a team in a university-wide AI hackathon.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/48x48/8b5cf6/ffffff?text=🔬" alt="Research Icon" class="w-12 h-12 mr-4">
+                            <h3 class="text-2xl font-semibold text-gray-900">Research Assistant</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Working as a research assistant on a project focused on applying machine learning techniques to healthcare data.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Assisted in data preprocessing and model training.</li>
+                            <li>Contributed to literature review and report writing.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/48x48/10b981/ffffff?text=📚" alt="Courses Icon" class="w-12 h-12 mr-4">
+                            <h3 class="text-2xl font-semibold text-gray-900">Online Courses</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Completed several online courses on platforms like Coursera and edX to expand knowledge in specialized AI domains.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Deep Learning Specialization (Coursera).</li>
+                            <li>Data Science Professional Certificate (edX).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 px-6 md:px-12 bg-white">
+            <div class="container mx-auto section-fade">
+                <h2 class="text-4xl font-bold text-center gradient-text mb-6">Contact Me</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                    Feel free to reach out if you have any questions or would like to collaborate.
+                </p>
+
+                <div class="flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:space-x-16">
+                    <div class="w-full lg:w-1/2 bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/32x32/3b82f6/ffffff?text=📧" alt="Email Icon" class="w-8 h-8 mr-4">
+                                <div>
+                                    <p class="font-semibold text-gray-900">Email</p>
+                                    <a href="mailto:sujithsunil4818@gmail.com" class="text-blue-600 hover:underline">sujithsunil4818@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/32x32/8b5cf6/ffffff?text=📞" alt="Phone Icon" class="w-8 h-8 mr-4">
+                                <div>
+                                    <p class="font-semibold text-gray-900">Phone</p>
+                                    <a href="tel:+919849351572" class="text-blue-600 hover:underline">+91 98493 51572</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/32x32/10b981/ffffff?text=📍" alt="Location Icon" class="w-8 h-8 mr-4">
+                                <div>
+                                    <p class="font-semibold text-gray-900">Location</p>
+                                    <p>Rajampet, Andhra Pradesh, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mt-10 mb-6">Connect with me</h3>
+                        <div class="flex space-x-6">
+                            <a href="https://www.linkedin.com/in/sujith-kumar-802059298/" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-300 tech-icon">
+                                <img src="https://placehold.co/40x40/ffffff/0077B5?text=LI" alt="LinkedIn" class="w-10 h-10 rounded-full">
+                            </a>
+                            <a href="https://github.com/sujith0466" target="_blank" class="text-gray-600 hover:text-violet-600 transition duration-300 tech-icon">
+                                <img src="https://placehold.co/40x40/ffffff/181717?text=GH" alt="GitHub" class="w-10 h-10 rounded-full">
+                            </a>
+                            <a href="mailto:sujithsunil4818@gmail.com" class="text-gray-600 hover:text-emerald-600 transition duration-300 tech-icon">
+                                <img src="https://placehold.co/40x40/ffffff/D14836?text=EM" alt="Email" class="w-10 h-10 rounded-full">
+                            </a>
+                            </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Send Me a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-lg font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Subject of your message">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Your message..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-3 rounded-full bg-blue-600 text-white font-semibold text-lg shadow-lg hover:bg-blue-700 transition duration-300 btn-hover-effect">
+                                Send Message
+                            </button>
+                            <p class="text-center text-sm text-gray-500 mt-2">(Demo form - not functional)</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-white py-8 px-6 md:px-12">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+                <div class="flex flex-col items-center md:items-start">
+                    <h3 class="text-xl font-bold">Sanisetty Sujith Kumar</h3>
+                    <p class="text-sm text-gray-400">B.Tech in AI & Data Science</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/sujith-kumar-802059298/" target="_blank" class="text-gray-400 hover:text-blue-600 transition duration-300 tech-icon">
+                        <img src="https://placehold.co/32x32/ffffff/0077B5?text=LI" alt="LinkedIn" class="w-8 h-8 rounded-full">
+                    </a>
+                    <a href="https://github.com/sujith0466" target="_blank" class="text-gray-400 hover:text-violet-600 transition duration-300 tech-icon">
+                        <img src="https://placehold.co/32x32/ffffff/181717?text=GH" alt="GitHub" class="w-8 h-8 rounded-full">
+                    </a>
+                    <a href="mailto:sujithsunil4818@gmail.com" class="text-gray-400 hover:text-emerald-600 transition duration-300 tech-icon">
+                        <img src="https://placehold.co/32x32/ffffff/D14836?text=EM" alt="Email" class="w-8 h-8 rounded-full">
+                    </a>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm mt-8" id="copyright-year">
+                </div>
+            <div class="flex justify-center space-x-6 mt-4 text-sm text-gray-400">
+                <a href="#home" class="hover:text-white transition duration-300">Home</a>
+                <a href="#about" class="hover:text-white transition duration-300">About</a>
+                <a href="#projects" class="hover:text-white transition duration-300">Projects</a>
+                <a href="#contact" class="hover:text-white transition duration-300">Contact</a>
+            </div>
+        </footer>
+
+        <button id="back-to-top" class="p-4 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // JavaScript for dynamic animations and interactions
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // --- Typing Effect ---
+        const typingElement = document.querySelector('.typing-effect');
+        if (typingElement) {
+            // Re-trigger animation on page load for visibility
+            typingElement.style.animation = 'none';
+            void typingElement.offsetWidth; // Trigger reflow
+            typingElement.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+        }
+
+        // --- Scroll Reveal Animation ---
+        const sectionFadeElements = document.querySelectorAll('.section-fade');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of element visible
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        sectionFadeElements.forEach(el => {
+            sectionObserver.observe(el);
+        });
+
+        // --- Skill Progress Bar Animation ---
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        const progressBarObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target;
+                    // Trigger the animation by setting the custom property
+                    // The width is set by inline style, e.g., style="--progress-width: 90%;"
+                    progressBar.style.setProperty('--progress-width', progressBar.style.getPropertyValue('--progress-width'));
+                    observer.unobserve(progressBar); // Stop observing once animated
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // When 50% of the progress bar is visible
+        });
+
+        progressBars.forEach(bar => {
+            // Ensure the --progress-width custom property is initially set on the element
+            // This is handled by the HTML structure directly now.
+            progressBarObserver.observe(bar);
+        });
+
+        // --- Particle Effects for Project Card Headers ---
+        document.querySelectorAll('.project-card').forEach(card => {
+            const container = card.querySelector('.project-particles-container');
+            if (container) {
+                card.addEventListener('mouseenter', () => {
+                    for (let i = 0; i < 10; i++) { // Generate 10 particles
+                        const particle = document.createElement('div');
+                        particle.classList.add('particle');
+                        const size = Math.random() * 8 + 2; // Size between 2px and 10px
+                        particle.style.width = `${size}px`;
+                        particle.style.height = `${size}px`;
+                        particle.style.left = `${Math.random() * 100}%`;
+                        particle.style.top = `${Math.random() * 100}%`;
+                        container.appendChild(particle);
+
+                        // Animate particle movement and fade
+                        const animationDuration = Math.random() * 1 + 1.5; // 1.5s to 2.5s
+                        const translateX = (Math.random() - 0.5) * 50; // -25 to 25px
+                        const translateY = (Math.random() - 0.5) * 50; // -25 to 25px
+
+                        particle.animate([
+                            { transform: 'translate(0,0) scale(1)', opacity: 1 },
+                            { transform: `translate(${translateX}px, ${translateY}px) scale(0.1)`, opacity: 0 }
+                        ], {
+                            duration: animationDuration * 1000,
+                            easing: 'ease-out',
+                            fill: 'forwards'
+                        }).onfinish = () => {
+                            particle.remove(); // Remove particle after animation
+                        };
+                    }
+                });
+            }
+        });
+
+        // --- Animated Background Blobs ---
+        const blobContainer = document.getElementById('blob-container');
+        const colors = ['#3b82f6', '#8b5cf6', '#10b981', '#facc15']; // Primary, Secondary, Tertiary, Yellow
+        const numBlobs = 5;
+
+        function createBlob() {
+            const blob = document.createElement('div');
+            blob.classList.add('blob');
+            const size = Math.random() * 200 + 100; // Size between 100px and 300px
+            blob.style.width = `${size}px`;
+            blob.style.height = `${size}px`;
+            blob.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // Random initial position
+            blob.style.left = `${Math.random() * 100}vw`;
+            blob.style.top = `${Math.random() * 100}vh`;
+
+            // Random animation delay and duration for variety
+            blob.style.animationDelay = `${Math.random() * 5}s`;
+            blob.style.animationDuration = `${Math.random() * 10 + 10}s`; // 10s to 20s
+
+            blobContainer.appendChild(blob);
+        }
+
+        for (let i = 0; i < numBlobs; i++) {
+            createBlob();
+        }
+
+        // Adjust blob positions on resize (optional, but good for responsiveness)
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.blob').forEach(blob => {
+                blob.style.left = `${Math.random() * 100}vw`;
+                blob.style.top = `${Math.random() * 100}vh`;
+            });
+        });
+
+        // --- NEW: Back to Top Button ---
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll to top
+            });
+        });
+
+        // --- NEW: Header Shadow on Scroll ---
+        const mainHeader = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
+            }
+        });
+
+        // --- NEW: Dynamic Copyright Year in Footer ---
+        const copyrightYearElement = document.getElementById('copyright-year');
+        if (copyrightYearElement) {
+            const currentYear = new Date().getFullYear();
+            copyrightYearElement.textContent = `© ${currentYear} Sujith Kumar. All rights reserved.`;
+        }
+
+    </script>
+</body>
+</html>
