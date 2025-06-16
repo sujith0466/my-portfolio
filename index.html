@@ -364,6 +364,7 @@
                     <a href="#home" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Home</a>
                     <a href="#about" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">About</a>
                     <a href="#projects" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Projects</a>
+                    <a href="#achievements" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Achievements</a>
                     <a href="#skills" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Skills</a>
                     <a href="#activities" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Activities</a>
                     <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-blue-600 nav-link">Contact</a>
@@ -385,6 +386,7 @@
                 <a href="#home" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
                 <a href="#about" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
                 <a href="#projects" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+                <a href="#achievements" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Achievements</a>
                 <a href="#skills" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
                 <a href="#activities" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Activities</a>
                 <a href="#contact" class="text-3xl font-medium text-gray-700 hover:text-blue-600 nav-link" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
@@ -471,122 +473,110 @@
             </div>
         </section>
 
-        <section id="projects" class="py-16 md:py-24 px-6 md:px-12 bg-gray-50">
-            <div class="container mx-auto section-fade">
-                <h2 class="text-4xl font-bold text-center gradient-text mb-6">Projects</h2>
-                <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                    Here are some of the projects I've worked on during my academic journey.
-                </p>
+       <!-- === Projects Section === -->
+<sectio<section id="projects" class="py-16 md:py-24 px-6 md:px-12 bg-gray-50">
+  <div class="container mx-auto section-fade">
+    <h2 class="text-4xl font-bold text-center gradient-text mb-6">Projects</h2>
+    <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Some of the software projects I've developed during my academic and personal learning journey.
+    </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Hackathon" alt="Hackathon Participant" class="w-full h-full object-cover project-image-zoom">
-                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Hackathon Participant</h3>
-                        <p class="text-gray-700 mb-4">
-                            Participated in a 24-hour hackathon focused on AI and web development, enhancing problem-solving and teamwork.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium tech-icon">AI</span>
-                            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium tech-icon">Web Dev</span>
-                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium tech-icon">Teamwork</span>
-                        </div>
-                        <a href="https://github.com/sujith0466/OP_generator" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
-                            View Project
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Study Buddy App -->
+      <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+        <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Study+Buddy" alt="Study Buddy App" class="w-full h-48 object-cover mb-4 rounded-md">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Study Buddy App</h3>
+        <p class="text-gray-700 mb-4">
+          A collaborative study platform allowing users to find study partners, create groups, and share resources.
+        </p>
+        <a href="https://github.com/sujith0466/Study_Buddy" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+          <!--Deployment link-->
+        <a href="https://your-live-site.netlify.app" target="_blank" class="text-green-600 hover:underline">Live Demo</a>  
+      </div>
 
-                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img src="https://placehold.co/400x200/8b5cf6/ffffff?text=Workshop" alt="DL, DS & ML Workshop" class="w-full h-full object-cover project-image-zoom">
-                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Workshop on DL, DS & ML</h3>
-                        <p class="text-gray-700 mb-4">
-                            Attended a 3-day workshop covering fundamentals of Deep Learning, Data Science, and Machine Learning.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">Deep Learning</span>
-                            <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-sm font-medium tech-icon">Data Science</span>
-                            <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium tech-icon">Machine Learning</span>
-                        </div>
-                        <a href="https://example.com/workshop-details" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
-                            View Details
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
+      <!-- Hackathon Project -->
+      <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
+        <img src="https://placehold.co/400x200/4f46e5/ffffff?text=Hackathon+Project" alt="Hackathon Project" class="w-full h-48 object-cover mb-4 rounded-md">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">OP Generator - Hackathon</h3>
+        <p class="text-gray-700 mb-4">
+          Developed a smart OP generator during a 24-hour AI hackathon to streamline hospital appointment processes.
+        </p>
+        <a href="https://github.com/sujith0466/OP_generator" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+           <!--Deployment link-->
+        <a href="https://your-live-site.netlify.app" target="_blank" class="text-green-600 hover:underline">Live Demo</a>  
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img src="https://placehold.co/400x200/10b981/ffffff?text=C+Programming" alt="C Programming Course" class="w-full h-full object-cover project-image-zoom">
-                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">C Programming Course</h3>
-                        <p class="text-gray-700 mb-4">
-                            Learned core concepts like loops, arrays, pointers, and functions, building small C programs.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium tech-icon">C Language</span>
-                            <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium tech-icon">Algorithms</span>
-                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">Data Structures</span>
-                        </div>
-                        <a href="https://github.com/your-github/c-projects-link" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
-                            View Projects
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
+<section id="achievements" class="py-16 md:py-24 px-6 md:px-12 bg-white">
+  <div class="container mx-auto section-fade">
+    <h2 class="text-4xl font-bold text-center gradient-text mb-6">Achievements</h2>
+    <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Certifications and recognitions from various events, workshops, and courses.
+    </p>
 
-                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Study+Buddy" alt="Study Buddy App" class="w-full h-full object-cover project-image-zoom">
-                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Study Buddy App</h3>
-                        <p class="text-gray-700 mb-4">
-                            A collaborative study platform allowing users to find study partners, create groups, and share resources.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium tech-icon">React</span>
-                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium tech-icon">Firebase</span>
-                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium tech-icon">Tailwind CSS</span>
-                        </div>
-                        <a href="https://github.com/sujith0466/Study_Buddy" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
-                            View Project
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                    <div class="project-card bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <div class="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img src="https://placehold.co/400x200/10b981/ffffff?text=Dashboard" alt="Data Visualization Dashboard" class="w-full h-full object-cover project-image-zoom">
-                            <div class="project-particles-container absolute inset-0 pointer-events-none"></div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Data Visualization Dashboard</h3>
-                        <p class="text-gray-700 mb-4">
-                            Interactive dashboard built to visualize complex datasets, providing actionable insights for business intelligence.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium tech-icon">D3.js</span>
-                            <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium tech-icon">React</span>
-                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium tech-icon">PostgreSQL</span>
-                        </div>
-                        <a href="https://github.com/sujith0466" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-300 btn-hover-effect">
-                            View Project
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <div class="text-center mt-12">
-                    <a href="https://github.com/sujith0466?tab=repositories" target="_blank" class="px-8 py-3 rounded-full bg-blue-600 text-white font-semibold text-lg shadow-lg hover:bg-blue-700 transition duration-300 btn-hover-effect">
-                        View All Projects
-                    </a>
-                </div>
-            </div>
-        </section>
+      <!-- Hackathon Certificate -->
+      <div class="project-card bg-white p-6 rounded-xl shadow-lg card-hover-effect">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Hackathon Participation</h3>
+        <p class="text-gray-700 mb-4">24-hour AI Hackathon organized by XYZ Institution.</p>
+        <a href="https://your-link.com/hackathon-cert.jpg" target="_blank">
+          <img src="https://your-link.com/hackathon-cert.jpg" alt="Hackathon Certificate"
+               class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        </a>
+      </div>
 
+      <!-- Workshop Certificate -->
+      <div class="project-card bg-white p-6 rounded-xl shadow-lg card-hover-effect">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">DL, DS & ML Workshop</h3>
+        <p class="text-gray-700 mb-4">Completed a 3-day workshop on Deep Learning, Data Science, and Machine Learning.</p>
+        <a href="https://your-link.com/workshop-cert.jpg" target="_blank">
+          <img src="https://your-link.com/workshop-cert.jpg" alt="Workshop Certificate"
+               class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        </a>
+      </div>
+
+      <!-- C Programming Certificate -->
+      <div class="project-card bg-white p-6 rounded-xl shadow-lg card-hover-effect">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">C Programming Course</h3>
+        <p class="text-gray-700 mb-4">Completed foundational C programming course covering loops, arrays, and pointers.</p>
+        <a href="https://your-link.com/cprogramming-cert.jpg" target="_blank">
+          <img src="https://your-link.com/cprogramming-cert.jpg" alt="C Programming Certificate"
+               class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        </a>
+      </div>
+
+      <!-- Data Visualization Certificate (Forage) -->
+<div class="project-card bg-white p-6 rounded-xl shadow-lg card-hover-effect">
+  <h3 class="text-2xl font-semibold text-gray-900 mb-4">Data Visualization Certification</h3>
+  <p class="text-gray-700 mb-4">
+    Completed a data visualization virtual experience program offered by Forage in collaboration with a real company.
+  </p>
+  <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743512082855_completion_certificate.pdf" 
+     target="_blank"
+     class="inline-block px-4 py-2 bg-yellow-100 text-yellow-800 text-sm rounded-full hover:bg-yellow-200 transition">
+     View Certificate
+  </a>
+</div>
+
+<!-- Cybersecurity Virtual Experience (Forage) -->
+<div class="project-card bg-white p-6 rounded-xl shadow-lg card-hover-effect">
+  <h3 class="text-2xl font-semibold text-gray-900 mb-4">Cybersecurity Virtual Experience</h3>
+  <p class="text-gray-700 mb-4">
+    Gained practical cybersecurity insights through Forage's virtual internship simulating real-world threat mitigation.
+  </p>
+  <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743515110176_completion_certificate.pdf" 
+     target="_blank"
+     class="inline-block px-4 py-2 bg-green-100 text-green-800 text-sm rounded-full hover:bg-green-200 transition">
+     View Certificate
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+           
         <section id="skills" class="py-16 md:py-24 px-6 md:px-12 bg-white">
             <div class="container mx-auto section-fade">
                 <h2 class="text-4xl font-bold text-center gradient-text mb-6">Skills</h2>
