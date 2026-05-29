@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanisetty Sujith Kumar | AI Engineer & Full Stack Developer</title>
-    
+
     <!-- Primary Meta Tags -->
     <meta name="title" content="Sanisetty Sujith Kumar | AI Engineer & Full Stack Developer">
-    <meta name="description" content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, Power BI dashboards, and scalable modern digital solutions.">
-    <meta name="keywords" content="Sanisetty Sujith Kumar, AI Engineer, Full Stack Developer, Flask Developer, Python Developer, Machine Learning, Power BI, Data Science, Portfolio">
+    <meta name="description"
+        content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, Power BI dashboards, and scalable modern digital solutions.">
+    <meta name="keywords"
+        content="Sanisetty Sujith Kumar, AI Engineer, Full Stack Developer, Flask Developer, Python Developer, Machine Learning, Power BI, Data Science, Portfolio">
     <meta name="author" content="Sanisetty Sujith Kumar">
     <meta name="robots" content="index, follow">
 
@@ -16,21 +19,25 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sujithkumar.netlify.app/">
     <meta property="og:title" content="Sanisetty Sujith Kumar | AI Engineer & Full Stack Developer">
-    <meta property="og:description" content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, and modern digital solutions.">
+    <meta property="og:description"
+        content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, and modern digital solutions.">
     <meta property="og:image" content="images/portfolio_pic.jpeg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sujithkumar.netlify.app/">
     <meta property="twitter:title" content="Sanisetty Sujith Kumar | AI Engineer & Full Stack Developer">
-    <meta property="twitter:description" content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, and modern digital solutions.">
+    <meta property="twitter:description"
+        content="Portfolio of Sanisetty Sujith Kumar showcasing AI engineering, full stack development, machine learning projects, and modern digital solutions.">
     <meta property="twitter:image" content="images/portfolio_pic.jpeg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -55,17 +62,21 @@
         html {
             scroll-behavior: smooth;
         }
+
         section {
             padding-top: 5rem !important;
             padding-bottom: 5rem !important;
             scroll-margin-top: 80px;
         }
-        section + section {
+
+        section+section {
             margin-top: 0 !important;
         }
+
         #home {
             padding-bottom: 1rem !important;
         }
+
         #about,
         #skills,
         #projects,
@@ -74,17 +85,19 @@
         #contact {
             margin-top: 0 !important;
         }
+
         .container,
         .wrapper,
         .tech-scroll,
         .hero-perspective {
             margin-bottom: 0 !important;
         }
+
         body {
             background-color: #05070d;
             color: #ffffff;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
         }
@@ -102,9 +115,12 @@
             color: #9ca3af;
             transition: color 0.3s ease;
         }
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: #ffffff;
         }
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -124,17 +140,23 @@
             position: relative;
             overflow: hidden;
         }
+
         .glass-btn::before {
             content: '';
             position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s ease;
         }
+
         .glass-btn:hover {
             box-shadow: 0 6px 25px rgba(124, 58, 237, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
+
         .glass-btn:hover::before {
             left: 100%;
         }
@@ -144,6 +166,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
+
         .outline-btn:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
@@ -159,20 +182,23 @@
             font-size: 0.85rem;
             font-weight: 500;
             color: #fff;
-            background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(59,130,246,0.15));
-            border: 1px solid rgba(139,92,246,0.3);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.15));
+            border: 1px solid rgba(139, 92, 246, 0.3);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
+
         .github-btn:hover {
             transform: translateY(-2px) scale(1.03);
-            background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(59,130,246,0.3));
-            box-shadow: 0 0 20px rgba(139,92,246,0.4);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3));
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
         }
+
         .github-btn::after {
             content: "\2192";
             transition: transform 0.3s ease;
         }
+
         .github-btn:hover::after {
             transform: translateX(4px);
         }
@@ -202,16 +228,25 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-            70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
         }
 
         /* =========================================
            3D HERO COMPOSITION
            ========================================= */
         .hero-perspective {
-            perspective: 2500px; /* Increased perspective for more realistic depth */
+            perspective: 2500px;
+            /* Increased perspective for more realistic depth */
             width: 100%;
             height: 600px;
             position: relative;
@@ -225,12 +260,20 @@
             transform-style: preserve-3d;
             width: 100%;
             height: 100%;
-            animation: scene-float 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; /* Smoother, controlled easing */
+            animation: scene-float 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+            /* Smoother, controlled easing */
         }
 
         @keyframes scene-float {
-            0%, 100% { transform: translateY(0) rotateX(0deg); }
-            50% { transform: translateY(-12px) rotateX(2deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotateX(0deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotateX(2deg);
+            }
         }
 
         /* Base Glowing Platform */
@@ -246,21 +289,27 @@
 
         .platform-layer {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: 40px;
             background: rgba(10, 10, 20, 0.9);
         }
 
         .platform-layer.l1 {
             transform: translateZ(0px);
-            box-shadow: 0 0 50px rgba(124, 58, 237, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05), inset 0 0 40px rgba(99, 102, 241, 0.2); /* Added inner reflection */
+            box-shadow: 0 0 50px rgba(124, 58, 237, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05), inset 0 0 40px rgba(99, 102, 241, 0.2);
+            /* Added inner reflection */
             border: 2px solid rgba(139, 92, 246, 0.4);
         }
+
         .platform-layer.l2 {
             transform: translateZ(-40px) scale(0.95);
             border: 2px solid rgba(99, 102, 241, 0.2);
             box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
         }
+
         .platform-layer.l3 {
             transform: translateZ(-80px) scale(0.9);
             border: 2px solid rgba(99, 102, 241, 0.05);
@@ -268,8 +317,10 @@
 
         .platform-glow {
             position: absolute;
-            top: 50%; left: 50%;
-            width: 350px; height: 350px;
+            top: 50%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
             transform: translate(-50%, -50%) translateZ(20px);
             background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 60%);
             filter: blur(45px);
@@ -280,8 +331,10 @@
         /* Portrait Drop Shadow onto Platform */
         .portrait-shadow {
             position: absolute;
-            top: 50%; left: 50%;
-            width: 250px; height: 120px;
+            top: 50%;
+            left: 50%;
+            width: 250px;
+            height: 120px;
             transform: translate(-50%, -50%) translateZ(30px) rotateZ(-45deg);
             background: rgba(0, 0, 0, 0.8);
             filter: blur(25px);
@@ -296,11 +349,13 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Top edge highlight */
-            border-left: 1px solid rgba(255, 255, 255, 0.1); /* Side edge highlight */
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            /* Top edge highlight */
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            /* Side edge highlight */
             border-radius: 20px;
             transform-style: preserve-3d;
-            box-shadow: 0 25px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.15);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         }
 
         /* Center Portrait Card */
@@ -313,21 +368,32 @@
             margin-top: -240px;
             transform: translateZ(120px);
             border: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.8), 0 35px 60px rgba(0,0,0,0.8), 0 0 40px rgba(124, 58, 237, 0.15); /* Inner shadow for blending */
+            box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8), 0 35px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(124, 58, 237, 0.15);
+            /* Inner shadow for blending */
             overflow: hidden;
-            animation: float-center 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; /* Breathing motion */
+            animation: float-center 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+            /* Breathing motion */
         }
+
         .center-portrait img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            mask-image: linear-gradient(to bottom, black 70%, transparent 100%); /* Softer transition */
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            /* Softer transition */
             -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
         }
 
         @keyframes float-center {
-            0%, 100% { transform: translateZ(120px) translateY(0); }
-            50% { transform: translateZ(120px) translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateZ(120px) translateY(0);
+            }
+
+            50% {
+                transform: translateZ(120px) translateY(-10px);
+            }
         }
 
         /* Side Cards Base Styles */
@@ -336,12 +402,14 @@
             border-top: 1px solid rgba(139, 92, 246, 0.6);
             background: linear-gradient(180deg, rgba(30, 27, 75, 0.7) 0%, rgba(10, 10, 20, 0.85) 100%);
         }
+
         .side-card-title {
             font-size: 14px;
             font-weight: 600;
             color: #ffffff;
             margin-bottom: 4px;
         }
+
         .side-card-subtitle {
             font-size: 11px;
             color: #9ca3af;
@@ -354,19 +422,29 @@
             height: 40px;
             width: 100%;
         }
+
         .fake-chart svg {
             width: 100%;
             height: 100%;
             overflow: visible;
         }
+
         .fake-chart path {
             fill: none;
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
-        .chart-purple path { stroke: #a855f7; filter: drop-shadow(0 2px 4px rgba(168, 85, 247, 0.5)); }
-        .chart-blue path { stroke: #3b82f6; filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.5)); }
+
+        .chart-purple path {
+            stroke: #a855f7;
+            filter: drop-shadow(0 2px 4px rgba(168, 85, 247, 0.5));
+        }
+
+        .chart-blue path {
+            stroke: #3b82f6;
+            filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.5));
+        }
 
         /* Left Card */
         .side-card-left {
@@ -375,12 +453,22 @@
             left: 50%;
             margin-left: -280px;
             margin-top: -160px;
-            transform: translateZ(160px) rotateY(10deg); /* Balanced depth & rotation */
-            animation: float-left 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -2s; /* Micro delay */
+            transform: translateZ(160px) rotateY(10deg);
+            /* Balanced depth & rotation */
+            animation: float-left 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -2s;
+            /* Micro delay */
         }
+
         @keyframes float-left {
-            0%, 100% { transform: translateZ(160px) rotateY(10deg) translateY(0); }
-            50% { transform: translateZ(160px) rotateY(10deg) translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateZ(160px) rotateY(10deg) translateY(0);
+            }
+
+            50% {
+                transform: translateZ(160px) rotateY(10deg) translateY(-8px);
+            }
         }
 
         /* Right Top Card */
@@ -390,12 +478,22 @@
             left: 50%;
             margin-left: 150px;
             margin-top: -200px;
-            transform: translateZ(140px) rotateY(-10deg); /* Balanced depth & rotation */
-            animation: float-right-top 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -4s; /* Micro delay */
+            transform: translateZ(140px) rotateY(-10deg);
+            /* Balanced depth & rotation */
+            animation: float-right-top 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -4s;
+            /* Micro delay */
         }
+
         @keyframes float-right-top {
-            0%, 100% { transform: translateZ(140px) rotateY(-10deg) translateY(0); }
-            50% { transform: translateZ(140px) rotateY(-10deg) translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateZ(140px) rotateY(-10deg) translateY(0);
+            }
+
+            50% {
+                transform: translateZ(140px) rotateY(-10deg) translateY(-8px);
+            }
         }
 
         /* Right Bottom Card */
@@ -405,12 +503,22 @@
             left: 50%;
             margin-left: 170px;
             margin-top: 30px;
-            transform: translateZ(180px) rotateY(-8deg); /* Balanced depth & rotation */
-            animation: float-right-bottom 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -6s; /* Micro delay */
+            transform: translateZ(180px) rotateY(-8deg);
+            /* Balanced depth & rotation */
+            animation: float-right-bottom 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite -6s;
+            /* Micro delay */
         }
+
         @keyframes float-right-bottom {
-            0%, 100% { transform: translateZ(180px) rotateY(-8deg) translateY(0); }
-            50% { transform: translateZ(180px) rotateY(-8deg) translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateZ(180px) rotateY(-8deg) translateY(0);
+            }
+
+            50% {
+                transform: translateZ(180px) rotateY(-8deg) translateY(-8px);
+            }
         }
 
         /* =========================================
@@ -420,7 +528,8 @@
             perspective: 2500px;
             width: 100%;
             display: flex;
-            justify-content: center; /* Centered alignment */
+            justify-content: center;
+            /* Centered alignment */
         }
 
         .tech-module {
@@ -428,7 +537,8 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 4rem; /* Increased spacing */
+            gap: 4rem;
+            /* Increased spacing */
             padding: 2.5rem 5rem;
             background: rgba(15, 17, 26, 0.6);
             backdrop-filter: blur(20px);
@@ -438,14 +548,16 @@
             border-left: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             transform-style: preserve-3d;
-            transform: rotateX(10deg) rotateY(0deg) translateZ(0); /* Reduced tilt for readability */
-            box-shadow: 0 40px 60px rgba(0,0,0,0.8), 0 80px 120px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); /* Grounded shadow beneath */
+            transform: rotateX(10deg) rotateY(0deg) translateZ(0);
+            /* Reduced tilt for readability */
+            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.8), 0 80px 120px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            /* Grounded shadow beneath */
             transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.6s ease;
         }
 
         .tech-module:hover {
             transform: rotateX(5deg) rotateY(0deg) translateZ(50px);
-            box-shadow: 0 50px 80px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.2), 0 0 40px rgba(139, 92, 246, 0.15);
+            box-shadow: 0 50px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 40px rgba(139, 92, 246, 0.15);
         }
 
         .tech-item {
@@ -465,8 +577,10 @@
 
         .tech-icon-glow {
             position: absolute;
-            top: 40%; left: 50%;
-            width: 45px; height: 45px;
+            top: 40%;
+            left: 50%;
+            width: 45px;
+            height: 45px;
             transform: translate(-50%, -50%);
             border-radius: 50%;
             filter: blur(18px);
@@ -494,18 +608,20 @@
             transform: translateY(0);
             color: #ffffff;
         }
-        
+
         .tech-icon {
             width: 36px;
             height: 36px;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6)) grayscale(20%);
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6)) grayscale(20%);
             transition: all 0.4s ease;
         }
+
         /* =========================================
            STATS SECTION
            ========================================= */
         .stat-card {
-            background: linear-gradient(135deg, rgba(30, 32, 45, 0.6) 0%, rgba(15, 17, 26, 0.4) 100%); /* Inner light variation */
+            background: linear-gradient(135deg, rgba(30, 32, 45, 0.6) 0%, rgba(15, 17, 26, 0.4) 100%);
+            /* Inner light variation */
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -516,20 +632,24 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            height: 100%; /* Perfectly equal height */
+            height: 100%;
+            /* Perfectly equal height */
             transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05); /* Softer drop shadow */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            /* Softer drop shadow */
         }
-        
+
         .stat-card:hover {
-            transform: translateY(-8px) scale(1.02); /* Smooth micro-scale */
+            transform: translateY(-8px) scale(1.02);
+            /* Smooth micro-scale */
             background: linear-gradient(135deg, rgba(35, 37, 50, 0.7) 0%, rgba(20, 22, 35, 0.5) 100%);
             border-top: 1px solid rgba(139, 92, 246, 0.4);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 10px 30px rgba(139, 92, 246, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(139, 92, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .stat-icon-wrap {
-            width: 54px; height: 54px;
+            width: 54px;
+            height: 54px;
             flex-shrink: 0;
             border-radius: 14px;
             background: rgba(139, 92, 246, 0.1);
@@ -549,13 +669,14 @@
         }
 
         .stat-value {
-            font-size: 2.5rem; /* More prominent */
+            font-size: 2.5rem;
+            /* More prominent */
             font-weight: 700;
             color: #ffffff;
             line-height: 1.1;
             font-family: 'Outfit', sans-serif;
         }
-        
+
         .stat-label {
             font-size: 0.8rem;
             color: #9ca3af;
@@ -584,7 +705,7 @@
             padding: 1.5rem;
             transform-style: preserve-3d;
             transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -593,36 +714,80 @@
 
         /* Panoramic Rotations */
         @media (min-width: 768px) and (max-width: 1023px) {
+
             /* Tablet (2 cols): Fallback for classes so they match their actual grid positions */
-            .project-card:nth-child(odd) { transform: rotateY(3deg) rotateX(2deg) translateZ(-10px); }
-            .project-card:nth-child(even) { transform: rotateY(-3deg) rotateX(2deg) translateZ(-10px); }
+            .project-card:nth-child(odd) {
+                transform: rotateY(3deg) rotateX(2deg) translateZ(-10px);
+            }
+
+            .project-card:nth-child(even) {
+                transform: rotateY(-3deg) rotateX(2deg) translateZ(-10px);
+            }
         }
+
         @media (min-width: 1024px) {
-            .project-card.tl { transform: rotateY(3deg) rotateX(2deg) translateZ(-10px); }
-            .project-card.tm { transform: rotateY(0deg) rotateX(2deg) translateZ(-10px); }
-            .project-card.tr { transform: rotateY(-3deg) rotateX(2deg) translateZ(-10px); }
-            .project-card.bl { transform: rotateY(3deg) rotateX(-2deg) translateZ(-10px); }
-            .project-card.bm { transform: rotateY(0deg) rotateX(-2deg) translateZ(-10px); }
-            .project-card.br { transform: rotateY(-3deg) rotateX(-2deg) translateZ(-10px); }
+            .project-card.tl {
+                transform: rotateY(3deg) rotateX(2deg) translateZ(-10px);
+            }
+
+            .project-card.tm {
+                transform: rotateY(0deg) rotateX(2deg) translateZ(-10px);
+            }
+
+            .project-card.tr {
+                transform: rotateY(-3deg) rotateX(2deg) translateZ(-10px);
+            }
+
+            .project-card.bl {
+                transform: rotateY(3deg) rotateX(-2deg) translateZ(-10px);
+            }
+
+            .project-card.bm {
+                transform: rotateY(0deg) rotateX(-2deg) translateZ(-10px);
+            }
+
+            .project-card.br {
+                transform: rotateY(-3deg) rotateX(-2deg) translateZ(-10px);
+            }
         }
 
         .project-card:hover {
             transform: translateY(-8px) scale(1.02) !important;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.2);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2);
             z-index: 10;
         }
+
         @media (min-width: 768px) {
             .project-card:hover {
                 transform: rotateY(0deg) rotateX(0deg) translateZ(40px) translateY(-10px) !important;
-                box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.2);
+                box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2);
             }
         }
 
         /* Card Accent Differentiations */
-        .project-card.votewise:hover { border-top: 1px solid rgba(59, 130, 246, 0.5); border-left: 1px solid rgba(59, 130, 246, 0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 50px rgba(59, 130, 246, 0.15); }
-        .project-card.fairai:hover { border-top: 1px solid rgba(16, 185, 129, 0.5); border-left: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 50px rgba(16, 185, 129, 0.15); }
-        .project-card.schemaflow:hover { border-top: 1px solid rgba(99, 102, 241, 0.5); border-left: 1px solid rgba(99, 102, 241, 0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 50px rgba(99, 102, 241, 0.15); }
-        .project-card.mentra:hover { border-top: 1px solid rgba(236, 72, 153, 0.5); border-left: 1px solid rgba(236, 72, 153, 0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 50px rgba(236, 72, 153, 0.15); }
+        .project-card.votewise:hover {
+            border-top: 1px solid rgba(59, 130, 246, 0.5);
+            border-left: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(59, 130, 246, 0.15);
+        }
+
+        .project-card.fairai:hover {
+            border-top: 1px solid rgba(16, 185, 129, 0.5);
+            border-left: 1px solid rgba(16, 185, 129, 0.2);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(16, 185, 129, 0.15);
+        }
+
+        .project-card.schemaflow:hover {
+            border-top: 1px solid rgba(99, 102, 241, 0.5);
+            border-left: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(99, 102, 241, 0.15);
+        }
+
+        .project-card.mentra:hover {
+            border-top: 1px solid rgba(236, 72, 153, 0.5);
+            border-left: 1px solid rgba(236, 72, 153, 0.2);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(236, 72, 153, 0.15);
+        }
 
         .project-img-wrapper {
             position: relative;
@@ -630,18 +795,21 @@
             overflow: hidden;
             height: 220px;
             transform: translateZ(20px);
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
             transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
         .project-card:hover .project-img-wrapper {
             transform: translateZ(40px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
         }
 
         .project-img-wrapper img {
-            width: 100%; height: auto; min-height: 100%; object-fit: cover;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            object-fit: cover;
             transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
@@ -650,8 +818,9 @@
         }
 
         .project-img-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(to top, rgba(10,12,18,1) 0%, rgba(10,12,18,0.2) 60%, transparent 100%);
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 12, 18, 1) 0%, rgba(10, 12, 18, 0.2) 60%, transparent 100%);
         }
 
         .project-content {
@@ -663,7 +832,8 @@
             flex-direction: column;
             gap: 1.25rem;
             flex-grow: 1;
-            margin-top: -60px; /* Pull it up over the image gradient */
+            margin-top: -60px;
+            /* Pull it up over the image gradient */
         }
 
         .project-card:hover .project-content {
@@ -701,6 +871,7 @@
             border: 1px solid rgba(139, 92, 246, 0.5);
             box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
         }
+
         .project-btn-primary:hover {
             background: rgba(139, 92, 246, 0.4);
             box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
@@ -711,6 +882,7 @@
             color: #d1d5db;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .project-btn-secondary:hover {
             background: rgba(255, 255, 255, 0.15);
             color: #ffffff;
@@ -732,7 +904,7 @@
             flex-direction: column;
             gap: 1.5rem;
             transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
             transform-style: preserve-3d;
             transform: translateZ(0);
             opacity: 0;
@@ -740,15 +912,22 @@
         }
 
         @keyframes certFadeUp {
-            from { opacity: 0; transform: translateY(40px) translateZ(0); }
-            to { opacity: 1; transform: translateY(0) translateZ(0); }
+            from {
+                opacity: 0;
+                transform: translateY(40px) translateZ(0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
         }
 
         .cert-card:hover {
             transform: translateY(-8px) scale(1.02);
             background: linear-gradient(135deg, rgba(20, 22, 35, 0.8) 0%, rgba(15, 17, 26, 0.9) 100%);
             border-color: rgba(139, 92, 246, 0.4);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 10px 40px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 10px 40px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* =========================================
@@ -767,7 +946,7 @@
             flex-direction: column;
             gap: 1.5rem;
             transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
             transform-style: preserve-3d;
             transform: translateZ(0);
         }
@@ -777,11 +956,12 @@
             background: linear-gradient(135deg, rgba(20, 22, 35, 0.8) 0%, rgba(15, 17, 26, 0.9) 100%);
             border-top: 1px solid rgba(139, 92, 246, 0.4);
             border-left: 1px solid rgba(139, 92, 246, 0.2);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 10px 40px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 10px 40px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .service-icon-wrap {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             border-radius: 14px;
             background: rgba(139, 92, 246, 0.1);
             border: 1px solid rgba(139, 92, 246, 0.2);
@@ -823,7 +1003,7 @@
             border-left: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 1.5rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
             transform-style: preserve-3d;
         }
@@ -855,43 +1035,74 @@
             border-top: 1px solid rgba(139, 92, 246, 0.3);
         }
 
-        .about-visual-perspective:hover .about-panel.p1 { transform: rotateY(0deg) translateZ(20px); }
-        .about-visual-perspective:hover .about-panel.p2 { transform: rotateY(0deg) translateZ(-40px) translateX(-140px) translateY(-30px); opacity: 0.8; }
-        .about-visual-perspective:hover .about-panel.p3 { transform: rotateY(0deg) translateZ(60px) translateX(120px) translateY(40px); opacity: 1; }
+        .about-visual-perspective:hover .about-panel.p1 {
+            transform: rotateY(0deg) translateZ(20px);
+        }
+
+        .about-visual-perspective:hover .about-panel.p2 {
+            transform: rotateY(0deg) translateZ(-40px) translateX(-140px) translateY(-30px);
+            opacity: 0.8;
+        }
+
+        .about-visual-perspective:hover .about-panel.p3 {
+            transform: rotateY(0deg) translateZ(60px) translateX(120px) translateY(40px);
+            opacity: 1;
+        }
 
         .code-line {
             height: 6px;
             border-radius: 4px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             margin-bottom: 12px;
         }
-        .code-line.w-short { width: 30%; }
-        .code-line.w-mid { width: 60%; }
-        .code-line.w-long { width: 85%; }
-        .code-line.purple { background: rgba(139, 92, 246, 0.4); }
+
+        .code-line.w-short {
+            width: 30%;
+        }
+
+        .code-line.w-mid {
+            width: 60%;
+        }
+
+        .code-line.w-long {
+            width: 85%;
+        }
+
+        .code-line.purple {
+            background: rgba(139, 92, 246, 0.4);
+        }
 
         /* --- Mobile Optimization Tweaks --- */
         @media (max-width: 768px) {
+
             /* 0. Hero Section Mobile Fixes */
             #home {
-                padding-top: 4rem !important; /* Aggressively reduced top gap */
+                padding-top: 4rem !important;
+                /* Aggressively reduced top gap */
                 padding-bottom: 0 !important;
-                min-height: auto !important;  /* Removed forced screen height */
+                min-height: auto !important;
+                /* Removed forced screen height */
             }
+
             .hero-perspective {
-                display: flex !important; /* override hidden */
+                display: flex !important;
+                /* override hidden */
                 justify-content: center;
                 align-items: center;
                 overflow: visible;
-                margin-top: 1rem !important;     /* Reduced top spacing */
-                margin-bottom: -10px !important; /* Slight adjust */
+                margin-top: 1rem !important;
+                /* Reduced top spacing */
+                margin-bottom: -10px !important;
+                /* Slight adjust */
                 padding-bottom: 0 !important;
             }
+
             .scene {
                 transform: scale(0.55) !important;
                 transform-origin: top center;
                 margin-bottom: -170px;
             }
+
             .center-portrait {
                 border: none !important;
                 box-shadow: none !important;
@@ -907,7 +1118,8 @@
                 height: auto !important;
                 margin: 0 !important;
             }
-            .tech-scroll, 
+
+            .tech-scroll,
             .tech-module,
             .tech-track {
                 border: none !important;
@@ -917,6 +1129,7 @@
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
             }
+
             .tech-scroll {
                 overflow: hidden;
                 position: relative;
@@ -925,6 +1138,7 @@
                 padding: 0 !important;
                 height: auto !important;
             }
+
             .tech-module::before,
             .tech-module::after,
             .tech-scroll::before,
@@ -942,16 +1156,25 @@
                 padding: 0 6rem 0 2rem;
                 animation: scrollLoop 50s linear infinite;
             }
+
             .tech-item:last-child {
                 margin-right: 2rem;
             }
+
             .tech-scroll:active .tech-track {
                 animation-play-state: paused;
             }
+
             @keyframes scrollLoop {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
             }
+
             .tech-item {
                 flex: 0 0 auto;
                 width: 90px;
@@ -959,9 +1182,11 @@
                 transform: translateY(0);
                 transition: transform 0.3s ease;
             }
+
             .tech-item:active {
                 transform: translateY(-2px);
             }
+
             .tech-item img,
             .tech-item svg {
                 width: 40px;
@@ -969,6 +1194,7 @@
                 margin: 0 auto;
                 filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.3));
             }
+
             .tech-item span {
                 display: block;
                 font-size: 0.7rem;
@@ -980,24 +1206,30 @@
             .project-card {
                 padding: 1rem;
             }
+
             .project-img-wrapper {
                 height: 140px;
             }
+
             .project-content h3 {
                 font-size: 1.1rem;
             }
+
             .project-content p {
                 font-size: 0.85rem;
                 line-height: 1.4;
             }
+
             .project-tag {
                 padding: 0.15rem 0.5rem !important;
                 font-size: 0.65rem !important;
             }
+
             .project-content .flex-wrap {
                 gap: 0.4rem;
                 flex-wrap: wrap;
             }
+
             .project-btn {
                 padding: 0.5rem 0.7rem !important;
                 font-size: 0.8rem !important;
@@ -1008,22 +1240,24 @@
                 padding-top: 3rem !important;
                 padding-bottom: 3rem !important;
             }
+
             #home {
                 padding-top: 6rem !important;
             }
         }
-
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
+
             <!-- Logo -->
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                <div
+                    class="w-8 h-8 rounded bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(99,102,241,0.5)]">
                     S
                 </div>
                 <span class="text-xl font-medium text-white tracking-wide">Sanisetty Sujith</span>
@@ -1044,32 +1278,46 @@
             <div class="flex items-center gap-4">
                 <a href="#contact" class="glass-btn px-6 py-2.5 rounded-full text-white text-sm font-medium">Hire Me</a>
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white transition focus:outline-none ml-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-gray-400 hover:text-white transition focus:outline-none ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- Mobile Navigation Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#05070d]/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 pt-20 transition-opacity duration-300 opacity-0 pointer-events-none">
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#05070d]/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 pt-20 transition-opacity duration-300 opacity-0 pointer-events-none">
         <a href="#home" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Home</a>
-        <a href="#about" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">About</a>
-        <a href="#skills" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Skills</a>
-        <a href="#projects" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Projects</a>
-        <a href="#experience" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Experience</a>
-        <a href="#certifications" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Certifications</a>
-        <a href="#contact" class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Contact</a>
+        <a href="#about"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">About</a>
+        <a href="#skills"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Skills</a>
+        <a href="#projects"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Projects</a>
+        <a href="#experience"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Experience</a>
+        <a href="#certifications"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Certifications</a>
+        <a href="#contact"
+            class="mobile-nav-link text-2xl font-medium text-gray-300 hover:text-white transition">Contact</a>
     </div>
 
     <!-- Main Hero Section -->
     <section id="home" class="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            
+
             <!-- Left Content -->
             <div class="space-y-10 relative z-20 md:pr-10">
                 <!-- Badge -->
-                <div class="badge-glow inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-200">
+                <div
+                    class="badge-glow inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-200">
                     <div class="status-dot-pulse"></div>
                     Available for Work
                 </div>
@@ -1084,23 +1332,35 @@
 
                 <!-- Subheading -->
                 <h3 class="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed mt-2">
-                    AI Engineer <span class="text-gray-500 px-2">|</span> Full Stack Developer <span class="text-gray-500 px-2">|</span><br class="hidden md:block"> Data Science Enthusiast
+                    AI Engineer <span class="text-gray-500 px-2">|</span> Full Stack Developer <span
+                        class="text-gray-500 px-2">|</span><br class="hidden md:block"> Data Science Enthusiast
                 </h3>
 
                 <!-- Paragraph -->
                 <p class="text-gray-300 text-lg font-inter max-w-lg leading-relaxed mt-4">
-                    I build intelligent, scalable and impactful digital solutions using AI, data and full stack technologies.
+                    I build intelligent, scalable and impactful digital solutions using AI, data and full stack
+                    technologies.
                 </p>
 
                 <!-- Actions -->
                 <div class="flex flex-wrap items-center gap-5 pt-6">
-                    <a href="#contact" class="glass-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2">
-                        Hire Me 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <a href="#contact"
+                        class="glass-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2">
+                        Hire Me
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </a>
-                    <a href="#projects" class="outline-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2">
+                    <a href="#projects"
+                        class="outline-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2">
                         View Projects
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </a>
                 </div>
 
@@ -1116,7 +1376,7 @@
             <!-- Right Content: 3D Composition -->
             <div class="hero-perspective hidden lg:flex">
                 <div class="scene">
-                    
+
                     <!-- Base Platform (Layered glowing squares) -->
                     <div class="base-platform">
                         <div class="platform-layer l3"></div>
@@ -1162,7 +1422,8 @@
                     <!-- Center Portrait Glass Card -->
                     <div class="float-card center-portrait">
                         <!-- Used a placeholder since local paths might break or differ -->
-                        <img src="images/portfolio_pic.jpeg" alt="Sujith Kumar" onerror="this.src='https://placehold.co/400x600/111827/ffffff?text=Portrait'">
+                        <img src="images/portfolio_pic.jpeg" alt="Sujith Kumar"
+                            onerror="this.src='https://placehold.co/400x600/111827/ffffff?text=Portrait'">
                     </div>
 
                 </div>
@@ -1174,32 +1435,37 @@
     <!-- About Section -->
     <section id="about" class="relative z-20 py-32 mt-8">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
+
             <!-- Left: Content -->
             <div class="space-y-6 max-w-lg">
                 <h3 class="text-xs font-semibold tracking-widest text-textMuted uppercase mb-3 ml-1">My Journey</h3>
-                <h2 class="text-4xl font-bold text-white tracking-tight">Bridging <span class="text-accentPurple">Data</span> and Design</h2>
-                
+                <h2 class="text-4xl font-bold text-white tracking-tight">Bridging <span
+                        class="text-accentPurple">Data</span> and Design</h2>
+
                 <div class="space-y-5">
                     <p class="text-gray-400 text-base leading-[1.9]">
-                        As a B.Tech student specializing in Artificial Intelligence and Data Science, my path is rooted in a deep fascination with transforming complex data into seamless experiences. I specialize in the critical intersection between predictive modeling and full-stack implementation.
+                        As a B.Tech student specializing in Artificial Intelligence and Data Science, my path is rooted
+                        in a deep fascination with transforming complex data into seamless experiences. I specialize in
+                        the critical intersection between predictive modeling and full-stack implementation.
                     </p>
                     <p class="text-gray-400 text-base leading-[1.9]">
-                        I don't just build algorithms; I architect complete solutions. From designing robust backend pipelines to crafting premium glassmorphic interfaces, my goal is to deliver products that are as technically sound as they are visually compelling.
+                        I don't just build algorithms; I architect complete solutions. From designing robust backend
+                        pipelines to crafting premium glassmorphic interfaces, my goal is to deliver products that are
+                        as technically sound as they are visually compelling.
                     </p>
                 </div>
             </div>
 
             <!-- Right: Visual System Panel -->
             <div class="about-visual-perspective hidden md:flex">
-                
+
                 <div class="about-panel p2">
                     <div class="code-line w-long"></div>
                     <div class="code-line w-short mt-4"></div>
                     <div class="code-line w-mid"></div>
                     <div class="code-line w-long mt-4"></div>
                 </div>
-                
+
                 <div class="about-panel p1">
                     <div class="flex items-center gap-2 mb-6">
                         <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
@@ -1216,7 +1482,9 @@
                 <div class="about-panel p3">
                     <div class="flex items-center justify-between mb-5">
                         <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase">System Status</span>
-                        <div class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.8)]"></div>
+                        <div
+                            class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.8)]">
+                        </div>
                     </div>
                     <div class="code-line w-long"></div>
                     <div class="code-line w-long"></div>
@@ -1229,138 +1497,245 @@
         </div>
     </section>
 
+    <!-- Featured Achievement Showcase Section -->
+    <section id="achievement" class="relative z-20 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="relative rounded-[2rem] overflow-hidden bg-[#0f111a]/60 backdrop-blur-xl border border-white/10 p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 shadow-[0_20px_60px_-15px_rgba(139,92,246,0.15)] group hover:border-purple-500/30 transition-all duration-500">
+
+                <!-- Background Ambient Glows -->
+                <div
+                    class="absolute -top-[30%] -left-[10%] w-[50%] h-[80%] rounded-full bg-indigo-600/20 blur-[100px] pointer-events-none transition-opacity group-hover:opacity-80">
+                </div>
+                <div
+                    class="absolute -bottom-[30%] -right-[10%] w-[50%] h-[80%] rounded-full bg-purple-600/20 blur-[100px] pointer-events-none transition-opacity group-hover:opacity-80">
+                </div>
+
+                <!-- Content Side -->
+                <div class="flex-1 space-y-8 relative z-10 w-full lg:max-w-xl order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-semibold tracking-wide backdrop-blur-md shadow-[0_0_20px_rgba(139,92,246,0.15)]">
+                        🏆 Featured Achievement
+                    </div>
+
+                    <div class="space-y-4">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+                            OpenAI x Outskill <br class="hidden lg:block" /><span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">AI
+                                Builders Hackathon</span> 2026
+                        </h2>
+                        <p class="text-gray-300 text-lg md:text-xl leading-relaxed">
+                            Shortlisted among 1,000 builders selected from over <span
+                                class="text-white font-medium">10,000+ applicants worldwide.</span>
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm border-l-4 border-l-purple-500 shadow-inner">
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                            Built <span class="text-white font-bold tracking-wide">FlowMind AI</span> – AI-Powered
+                            Multi-Agent Productivity Operating System.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-5 pt-2">
+                        <a href="images/Sanisetty%20Sujith%20Kumar-openai-hackathon.png" target="_blank"
+                            class="glass-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2 bg-gradient-to-r from-indigo-600/30 to-purple-600/30 border-purple-500/30 hover:border-purple-500/60 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] transition-all">
+                            View Achievement
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="https://flowmind-ai-six.vercel.app" target="_blank" rel="noopener noreferrer"
+                            class="outline-btn px-8 py-3.5 rounded-full text-white font-medium flex items-center gap-2 hover:bg-white/5 transition-all border-white/20 hover:border-white/40">
+                            View FlowMind AI
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Side -->
+                <div class="flex-1 w-full relative z-10 order-1 lg:order-2">
+                    <a href="images/Sanisetty%20Sujith%20Kumar-openai-hackathon.png" target="_blank"
+                        class="block relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)] group/img cursor-pointer transform hover:-translate-y-2 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-purple-900/40 via-transparent to-transparent opacity-60 z-10 group-hover/img:opacity-30 transition-opacity duration-500 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute inset-0 rounded-2xl border-2 border-transparent group-hover/img:border-purple-500/50 transition-colors duration-500 z-20 pointer-events-none">
+                        </div>
+                        <img src="images/Sanisetty%20Sujith%20Kumar-openai-hackathon.png"
+                            alt="OpenAI Hackathon Achievement"
+                            class="w-full h-auto object-cover transform group-hover/img:scale-105 transition-transform duration-700 ease-out relative z-0">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Tech Stack Section -->
     <section id="skills" class="relative z-20 py-16">
         <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-xs font-semibold tracking-widest text-textMuted text-center uppercase mb-12">Technologies I Work With</h3>
-            
+            <h3 class="text-xs font-semibold tracking-widest text-textMuted text-center uppercase mb-12">Technologies I
+                Work With</h3>
+
             <div class="tech-module-perspective flex">
                 <div class="tech-scroll w-full lg:w-auto">
                     <div class="tech-module tech-track">
-                    
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#61dafb]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
-                        <span class="tech-label">React</span>
-                    </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#ffffff]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Next.js" class="tech-icon">
-                        <span class="tech-label">Next.js</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#61dafb]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                alt="React" class="tech-icon">
+                            <span class="tech-label">React</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#3776ab]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
-                        <span class="tech-label">Python</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#ffffff]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Next.js"
+                                class="tech-icon">
+                            <span class="tech-label">Next.js</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#339933]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon">
-                        <span class="tech-label">Node.js</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#3776ab]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="tech-icon">
+                            <span class="tech-label">Python</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#ffffff]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Flask" class="tech-icon">
-                        <span class="tech-label">Flask</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#339933]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js" class="tech-icon">
+                            <span class="tech-label">Node.js</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#ff6f00]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon">
-                        <span class="tech-label">TensorFlow</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#ffffff]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Flask"
+                                class="tech-icon">
+                            <span class="tech-label">Flask</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#47a248]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-icon">
-                        <span class="tech-label">MongoDB</span>
-                    </div>
-                    
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#4479a1]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
-                        <span class="tech-label">MySQL</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#ff6f00]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="tech-icon">
+                            <span class="tech-label">TensorFlow</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#ffca28]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="tech-icon">
-                        <span class="tech-label">Firebase</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#47a248]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB" class="tech-icon">
+                            <span class="tech-label">MongoDB</span>
+                        </div>
 
-                    <div class="tech-item group">
-                        <div class="tech-icon-glow bg-[#ff9900]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="AWS" class="tech-icon">
-                        <span class="tech-label">AWS</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#4479a1]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                alt="MySQL" class="tech-icon">
+                            <span class="tech-label">MySQL</span>
+                        </div>
 
-                    <!-- Duplicated Items for Infinite Scroll -->
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#61dafb]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
-                        <span class="tech-label">React</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#ffca28]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                alt="Firebase" class="tech-icon">
+                            <span class="tech-label">Firebase</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#ffffff]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Next.js" class="tech-icon">
-                        <span class="tech-label">Next.js</span>
-                    </div>
+                        <div class="tech-item group">
+                            <div class="tech-icon-glow bg-[#ff9900]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="AWS"
+                                class="tech-icon">
+                            <span class="tech-label">AWS</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#3776ab]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
-                        <span class="tech-label">Python</span>
-                    </div>
+                        <!-- Duplicated Items for Infinite Scroll -->
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#61dafb]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                alt="React" class="tech-icon">
+                            <span class="tech-label">React</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#339933]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon">
-                        <span class="tech-label">Node.js</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#ffffff]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Next.js"
+                                class="tech-icon">
+                            <span class="tech-label">Next.js</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#ffffff]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Flask" class="tech-icon">
-                        <span class="tech-label">Flask</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#3776ab]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="tech-icon">
+                            <span class="tech-label">Python</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#ff6f00]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon">
-                        <span class="tech-label">TensorFlow</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#339933]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js" class="tech-icon">
+                            <span class="tech-label">Node.js</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#47a248]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-icon">
-                        <span class="tech-label">MongoDB</span>
-                    </div>
-                    
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#4479a1]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
-                        <span class="tech-label">MySQL</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#ffffff]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="Flask"
+                                class="tech-icon">
+                            <span class="tech-label">Flask</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#ffca28]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="tech-icon">
-                        <span class="tech-label">Firebase</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#ff6f00]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="tech-icon">
+                            <span class="tech-label">TensorFlow</span>
+                        </div>
 
-                    <div class="tech-item group md:hidden">
-                        <div class="tech-icon-glow bg-[#ff9900]"></div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="AWS" class="tech-icon">
-                        <span class="tech-label">AWS</span>
-                    </div>
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#47a248]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB" class="tech-icon">
+                            <span class="tech-label">MongoDB</span>
+                        </div>
 
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#4479a1]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                alt="MySQL" class="tech-icon">
+                            <span class="tech-label">MySQL</span>
+                        </div>
+
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#ffca28]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                alt="Firebase" class="tech-icon">
+                            <span class="tech-label">Firebase</span>
+                        </div>
+
+                        <div class="tech-item group md:hidden">
+                            <div class="tech-icon-glow bg-[#ff9900]"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                style="filter: invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.6));" alt="AWS"
+                                class="tech-icon">
+                            <span class="tech-label">AWS</span>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </section>
@@ -1368,11 +1743,18 @@
     <!-- Stats Section -->
     <section id="stats" class="relative z-20 pt-10 pb-32">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
             <!-- Card 1 -->
             <div class="stat-card">
                 <div class="stat-icon-wrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
                 </div>
                 <div>
                     <div class="stat-value">3+</div>
@@ -1383,7 +1765,12 @@
             <!-- Card 2 -->
             <div class="stat-card">
                 <div class="stat-icon-wrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
                 </div>
                 <div>
                     <div class="stat-value">25+</div>
@@ -1394,7 +1781,12 @@
             <!-- Card 3 -->
             <div class="stat-card">
                 <div class="stat-icon-wrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
                 <div>
                     <div class="stat-value">10+</div>
@@ -1405,7 +1797,12 @@
             <!-- Card 4 -->
             <div class="stat-card">
                 <div class="stat-icon-wrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                    </svg>
                 </div>
                 <div>
                     <div class="stat-value">5 <span class="text-accentPurple ml-1 text-xl">&#9733;</span></div>
@@ -1419,14 +1816,17 @@
     <!-- Featured Projects Section -->
     <section id="projects" class="relative z-20 pt-32 pb-24 bg-gradient-to-b from-transparent to-[#05070d]">
         <div class="max-w-7xl mx-auto px-6">
-            
+
             <!-- Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                 <div>
-                    <h3 class="text-xs font-semibold tracking-widest text-accentPurple uppercase mb-3 ml-1">FEATURED AI PROJECTS</h3>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Featured <span class="text-gray-500">Projects</span></h2>
+                    <h3 class="text-xs font-semibold tracking-widest text-accentPurple uppercase mb-3 ml-1">FEATURED AI
+                        PROJECTS</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Featured <span
+                            class="text-gray-500">Projects</span></h2>
                 </div>
-                <a href="#projects" class="text-gray-400 hover:text-white flex items-center gap-2 font-medium transition text-sm">
+                <a href="#projects"
+                    class="text-gray-400 hover:text-white flex items-center gap-2 font-medium transition text-sm">
                     View All Projects &rarr;
                 </a>
             </div>
@@ -1434,29 +1834,99 @@
             <!-- 3D Panoramic Grid -->
             <div class="projects-perspective">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-                                       <!-- Card 1: VoteWise AI (Top Left) -->
+
+                    <!-- Card 0: FlowMind AI (Featured) -->
+                    <div class="project-card tl flowmind">
+                        <div class="project-img-wrapper relative">
+                            <div
+                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#8b5cf6]/20 border border-[#8b5cf6]/30 text-[#8b5cf6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+                                Featured</div>
+                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FM"
+                                alt="FlowMind AI">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">FlowMind AI</h3>
+                                <p class="text-gray-400 text-sm leading-[1.7]">
+                                    An intelligent multi-agent productivity platform that orchestrates specialized AI
+                                    agents to automate workflows, generate execution plans, summarize information, and
+                                    help users move from ideas to execution.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">React</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Flask</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Supabase</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Gemini
+                                    AI</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Framer
+                                    Motion</span>
+                            </div>
+                            <div class="flex gap-3 mt-4">
+                                <a href="https://github.com/sujith0466/Flowmind_AI" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
+                                    View Code
+                                </a>
+                                <a href="https://flowmind-ai-six.vercel.app" target="_blank"
+                                    class="project-btn project-btn-primary !bg-purple-600/20 !border-purple-500/50 !shadow-[0_0_15px_rgba(139,92,246,0.2)] hover:!bg-purple-600/40 hover:!shadow-[0_0_25px_rgba(139,92,246,0.4)]">
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 1: VoteWise AI (Top Left) -->
                     <div class="project-card tl votewise">
                         <div class="project-img-wrapper relative">
-                            <div class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 text-[#3b82f6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(59,130,246,0.3)]">Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=VW" alt="VoteWise AI">
+                            <div
+                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 text-[#3b82f6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+                                Featured</div>
+                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=VW"
+                                alt="VoteWise AI">
                             <div class="project-img-overlay"></div>
                         </div>
                         <div class="project-content">
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">VoteWise-AI</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    AI-powered election intelligence system for sentiment analysis and candidate insights
+                                    AI-powered election intelligence system for sentiment analysis and candidate
+                                    insights
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Google PromptWars Virtual (Hack2Skill)</span>
+                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Google
+                                    PromptWars Virtual (Hack2Skill)</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/votewise-AI" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/votewise-AI" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://votewise-ai.onrender.com/" target="_blank" class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                                <a href="https://votewise-ai.onrender.com/" target="_blank"
+                                    class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1473,18 +1943,29 @@
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">SchemaFlow-AI</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    Intelligent schema generation and relationship visualization system built for internship backend workflows
+                                    Intelligent schema generation and relationship visualization system built for
+                                    internship backend workflows
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Internship Project</span>
+                                <span
+                                    class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Internship
+                                    Project</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/SchemaFlow-AI" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/SchemaFlow-AI" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://schema-flow-ai.vercel.app/" target="_blank" class="project-btn project-btn-primary !bg-indigo-600/20 !border-indigo-500/50 !shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:!bg-indigo-600/40 hover:!shadow-[0_0_25px_rgba(99,102,241,0.4)]">
+                                <a href="https://schema-flow-ai.vercel.app/" target="_blank"
+                                    class="project-btn project-btn-primary !bg-indigo-600/20 !border-indigo-500/50 !shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:!bg-indigo-600/40 hover:!shadow-[0_0_25px_rgba(99,102,241,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1494,26 +1975,40 @@
                     <!-- Card 3: FairAI Pro (Top Right) -->
                     <div class="project-card tr fairai">
                         <div class="project-img-wrapper relative">
-                            <div class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#10b981]/20 border border-[#10b981]/30 text-[#10b981] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(16,185,129,0.3)]">Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FA" alt="FairAI Pro">
+                            <div
+                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#10b981]/20 border border-[#10b981]/30 text-[#10b981] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(16,185,129,0.3)]">
+                                Featured</div>
+                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FA"
+                                alt="FairAI Pro">
                             <div class="project-img-overlay"></div>
                         </div>
                         <div class="project-content">
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">FairAI Pro</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    Bias detection and mitigation platform for ML datasets with explainability (Google Solution Challenge 2026)
+                                    Bias detection and mitigation platform for ML datasets with explainability (Google
+                                    Solution Challenge 2026)
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Google Solution Challenge 2026</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Google
+                                    Solution Challenge 2026</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/FairAI-Pro" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/FairAI-Pro" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://fair-ai-pro.vercel.app/" target="_blank" class="project-btn project-btn-primary !bg-emerald-600/20 !border-emerald-500/50 !shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:!bg-emerald-600/40 hover:!shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+                                <a href="https://fair-ai-pro.vercel.app/" target="_blank"
+                                    class="project-btn project-btn-primary !bg-emerald-600/20 !border-emerald-500/50 !shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:!bg-emerald-600/40 hover:!shadow-[0_0_25px_rgba(16,185,129,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1530,20 +2025,32 @@
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">Mentra UI</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    AI education UI ecosystem featuring adaptive flashcards, doubt solvers, and dynamic learning path integrations.
+                                    AI education UI ecosystem featuring adaptive flashcards, doubt solvers, and dynamic
+                                    learning path integrations.
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">React</span>
-                                <span class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">Tailwind</span>
-                                <span class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">Redux</span>
+                                <span
+                                    class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">React</span>
+                                <span
+                                    class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">Tailwind</span>
+                                <span
+                                    class="project-tag !border-pink-500/30 !text-pink-400 !bg-pink-500/10">Redux</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/AI-Student-Platform" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/AI-Student-Platform" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="#" target="_blank" class="project-btn project-btn-primary !bg-pink-600/20 !border-pink-500/50 !shadow-[0_0_15px_rgba(236,72,153,0.2)] hover:!bg-pink-600/40 hover:!shadow-[0_0_25px_rgba(236,72,153,0.4)]">
+                                <a href="#" target="_blank"
+                                    class="project-btn project-btn-primary !bg-pink-600/20 !border-pink-500/50 !shadow-[0_0_15px_rgba(236,72,153,0.2)] hover:!bg-pink-600/40 hover:!shadow-[0_0_25px_rgba(236,72,153,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1553,27 +2060,40 @@
                     <!-- Card 5: Credit Card Fraud Detection (Bottom Middle) -->
                     <div class="project-card bm">
                         <div class="project-img-wrapper">
-                            <img src="https://placehold.co/800x600/151822/2a3143?text=CFD" alt="Credit Card Fraud Detection">
+                            <img src="https://placehold.co/800x600/151822/2a3143?text=CFD"
+                                alt="Credit Card Fraud Detection">
                             <div class="project-img-overlay"></div>
                         </div>
                         <div class="project-content">
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">Credit Card Fraud Detection</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    ML project detecting fraudulent transactions using SMOTE, Random Forest, and XGBoost on real-world credit card data.
+                                    ML project detecting fraudulent transactions using SMOTE, Random Forest, and XGBoost
+                                    on real-world credit card data.
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Python</span>
-                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Scikit-learn</span>
-                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Machine Learning</span>
+                                <span
+                                    class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Python</span>
+                                <span
+                                    class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Scikit-learn</span>
+                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Machine
+                                    Learning</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/Credit_card_fraud_detection" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/Credit_card_fraud_detection" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://credit-card-fraud-detection-99kl.onrender.com" target="_blank" class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                                <a href="https://credit-card-fraud-detection-99kl.onrender.com" target="_blank"
+                                    class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1590,20 +2110,33 @@
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">Study Buddy App</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    A collaborative study platform allowing users to find study partners, create groups, and share resources.
+                                    A collaborative study platform allowing users to find study partners, create groups,
+                                    and share resources.
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">React</span>
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Node.js</span>
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Web Dev</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">React</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Node.js</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Web
+                                    Dev</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/Study_Buddy" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/Study_Buddy" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://your-live-site.netlify.app" target="_blank" class="project-btn project-btn-primary !bg-emerald-600/20 !border-emerald-500/50 !shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:!bg-emerald-600/40 hover:!shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+                                <a href="https://your-live-site.netlify.app" target="_blank"
+                                    class="project-btn project-btn-primary !bg-emerald-600/20 !border-emerald-500/50 !shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:!bg-emerald-600/40 hover:!shadow-[0_0_25px_rgba(16,185,129,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1620,20 +2153,32 @@
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-2">OP Generator</h3>
                                 <p class="text-gray-400 text-sm leading-[1.7]">
-                                    Smart OP generator developed during a 24-hour AI hackathon to streamline hospital appointment processes.
+                                    Smart OP generator developed during a 24-hour AI hackathon to streamline hospital
+                                    appointment processes.
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-1">
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Python</span>
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">AI</span>
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Automation</span>
+                                <span
+                                    class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Python</span>
+                                <span
+                                    class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">AI</span>
+                                <span
+                                    class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Automation</span>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/OP_generator" target="_blank" class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <a href="https://github.com/sujith0466/OP_generator" target="_blank"
+                                    class="project-btn project-btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
                                     View Code
                                 </a>
-                                <a href="https://your-live-site.netlify.app" target="_blank" class="project-btn project-btn-primary !bg-indigo-600/20 !border-indigo-500/50 !shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:!bg-indigo-600/40 hover:!shadow-[0_0_25px_rgba(99,102,241,0.4)]">
+                                <a href="https://your-live-site.netlify.app" target="_blank"
+                                    class="project-btn project-btn-primary !bg-indigo-600/20 !border-indigo-500/50 !shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:!bg-indigo-600/40 hover:!shadow-[0_0_25px_rgba(99,102,241,0.4)]">
                                     Live Demo
                                 </a>
                             </div>
@@ -1651,42 +2196,61 @@
 
         </div>
     </section>
-    
+
     <!-- Experience Section -->
     <section id="experience" class="relative z-20 pt-16 pb-24 bg-gradient-to-b from-transparent to-[#05070d]">
         <div class="max-w-7xl mx-auto px-6">
             <h3 class="text-xs font-semibold tracking-widest text-textMuted uppercase mb-3 ml-1">Work</h3>
-            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span class="text-gray-500">Experience</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span
+                    class="text-gray-500">Experience</span></h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="perspective: 2000px;">
-                
+
                 <!-- Experience 1: Edusiant -->
                 <div class="cert-card group" style="animation-delay: 0.1s;">
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400 mb-5 opacity-90"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-emerald-400 mb-5 opacity-90">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-white">Web Developer Intern <span class="text-emerald-400 text-lg font-medium">&ndash; Edusaint</span></h3>
+                                    <h3 class="text-xl font-bold text-white">Web Developer Intern <span
+                                            class="text-emerald-400 text-lg font-medium">&ndash; Edusaint</span></h3>
                                     <p class="text-gray-400 text-sm mt-1">Sep 2025 &ndash; Jan 2026</p>
                                 </div>
-                                <span class="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 bg-[#22c55e]/10 text-[#22c55e] rounded-full border border-[#22c55e]/20 whitespace-nowrap">
+                                <span
+                                    class="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 bg-[#22c55e]/10 text-[#22c55e] rounded-full border border-[#22c55e]/20 whitespace-nowrap">
                                     <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e]"></span>
                                     Currently Working
                                 </span>
                             </div>
                             <p class="text-gray-400 text-sm leading-[1.8] mb-4">
-                                Contributed to the development of a real-time online school platform. Focused on building responsive UI components, optimizing performance, and delivering seamless user experiences for live deployments.
+                                Contributed to the development of a real-time online school platform. Focused on
+                                building responsive UI components, optimizing performance, and delivering seamless user
+                                experiences for live deployments.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">HTML</span>
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">CSS</span>
-                                <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">JavaScript</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">HTML</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">CSS</span>
+                                <span
+                                    class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">JavaScript</span>
                             </div>
                         </div>
-                        <a href="https://school.edusaint.in" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-4">
+                        <a href="https://school.edusaint.in" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-4">
                             View Live Platform
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1695,25 +2259,43 @@
                 <div class="cert-card group" style="animation-delay: 0.3s;">
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400 mb-5 opacity-90"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-indigo-400 mb-5 opacity-90">
+                                <path d="M12 20v-6M6 20V10M18 20V4" />
+                            </svg>
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-white">Power BI Intern <span class="text-indigo-400 text-lg font-medium">&ndash; Cognifyz Technologies</span></h3>
+                                    <h3 class="text-xl font-bold text-white">Power BI Intern <span
+                                            class="text-indigo-400 text-lg font-medium">&ndash; Cognifyz
+                                            Technologies</span></h3>
                                     <p class="text-gray-400 text-sm mt-1">Apr 2026 &ndash; May 2026</p>
                                 </div>
                             </div>
                             <p class="text-gray-400 text-sm leading-[1.8] mb-4">
-                                Worked on Power BI dashboards, data visualization, reporting, and analytics workflows. Gained hands-on experience in transforming raw datasets into meaningful business insights using Power BI tools and visual storytelling techniques.
+                                Worked on Power BI dashboards, data visualization, reporting, and analytics workflows.
+                                Gained hands-on experience in transforming raw datasets into meaningful business
+                                insights using Power BI tools and visual storytelling techniques.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Power BI</span>
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Data Visualization</span>
-                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Reporting</span>
+                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Power
+                                    BI</span>
+                                <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Data
+                                    Visualization</span>
+                                <span
+                                    class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Reporting</span>
                             </div>
                         </div>
-                        <a href="https://drive.google.com/file/d/1gez8UNpy2unwa6srgf6zpthMmGoQO2K9/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-auto">
+                        <a href="https://drive.google.com/file/d/1gez8UNpy2unwa6srgf6zpthMmGoQO2K9/view?usp=sharing"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-auto">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1722,25 +2304,44 @@
                 <div class="cert-card group" style="animation-delay: 0.2s;">
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 mb-5 opacity-90"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-purple-400 mb-5 opacity-90">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-white">Data Science Intern <span class="text-purple-400 text-lg font-medium">&ndash; Pantech eLearning</span></h3>
+                                    <h3 class="text-xl font-bold text-white">Data Science Intern <span
+                                            class="text-purple-400 text-lg font-medium">&ndash; Pantech eLearning</span>
+                                    </h3>
                                     <p class="text-gray-400 text-sm mt-1">2 Months Internship</p>
                                 </div>
                             </div>
                             <p class="text-gray-400 text-sm leading-[1.8] mb-4">
-                                Completed hands-on ML projects analyzing datasets, training models, and gaining practical exposure to artificial intelligence workflows and data-driven problem-solving.
+                                Completed hands-on ML projects analyzing datasets, training models, and gaining
+                                practical exposure to artificial intelligence workflows and data-driven problem-solving.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Data Science</span>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Machine Learning</span>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI</span>
+                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Data
+                                    Science</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Machine
+                                    Learning</span>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI</span>
                             </div>
                         </div>
-                        <a href="https://drive.google.com/file/d/1ILE76wOeyTssewM82l__Femi2mesV065/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-auto">
+                        <a href="https://drive.google.com/file/d/1ILE76wOeyTssewM82l__Femi2mesV065/view?usp=sharing"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition mt-auto">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1753,27 +2354,76 @@
     <section id="certifications" class="relative z-20 py-32 mt-16">
         <div class="max-w-7xl mx-auto px-6">
             <h3 class="text-xs font-semibold tracking-widest text-textMuted uppercase mb-3 ml-1">Achievements</h3>
-            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span class="text-gray-500">Certifications</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span
+                    class="text-gray-500">Certifications</span></h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="perspective: 2000px;">
-                
+
+                <!-- Cert 0: HackerRank -->
+                <div class="cert-card group" style="animation-delay: 0.0s;">
+                    <div class="flex flex-col h-full justify-between gap-6">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI
+                                    Agent</span>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-white mb-2">HackerRank Orchestrate May 2026</h3>
+                            <p class="text-purple-400 text-sm font-medium mb-3">HackerRank &bull; May 2026</p>
+                            <p class="text-gray-400/80 text-sm leading-[1.8]">
+                                Successfully built and submitted an AI Agent as part of HackerRank Orchestrate May 2026.
+                            </p>
+                        </div>
+                        <a href="images/Hackerrank_Participation.jpg" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                            View Certificate
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Cert 1 -->
                 <div class="cert-card group" style="animation-delay: 0.1s;">
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
                             <div class="flex justify-between items-start mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 opacity-90"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Data Science</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Data
+                                    Science</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">Data Visualization</h3>
                             <p class="text-purple-400 text-sm font-medium mb-3">Forage</p>
                             <p class="text-gray-400/80 text-sm leading-[1.8]">
-                                Virtual experience program focused on corporate data visualization and analytical reporting.
+                                Virtual experience program focused on corporate data visualization and analytical
+                                reporting.
                             </p>
                         </div>
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743512082855_completion_certificate.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743512082855_completion_certificate.pdf"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1783,8 +2433,14 @@
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
                             <div class="flex justify-between items-start mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 opacity-90"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Cybersecurity</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Cybersecurity</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">Cybersecurity Experience</h3>
                             <p class="text-purple-400 text-sm font-medium mb-3">Forage</p>
@@ -1792,9 +2448,16 @@
                                 Practical simulation of real-world threat mitigation and cybersecurity workflows.
                             </p>
                         </div>
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743515110176_completion_certificate.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_t4nydscHb99cFMcfD_1743515110176_completion_certificate.pdf"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1804,8 +2467,14 @@
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
                             <div class="flex justify-between items-start mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 opacity-90"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI / ML</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI /
+                                    ML</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">24-Hour AI Hackathon</h3>
                             <p class="text-purple-400 text-sm font-medium mb-3">Puttur Siddartha Institution</p>
@@ -1813,9 +2482,16 @@
                                 Competitive hackathon building an intelligent OP generator in 24 hours.
                             </p>
                         </div>
-                        <a href="https://drive.google.com/file/d/1Gqn_EavtEkhx4RuvHWRBYkUMV5O4iylk/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                        <a href="https://drive.google.com/file/d/1Gqn_EavtEkhx4RuvHWRBYkUMV5O4iylk/view?usp=drive_link"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1825,8 +2501,14 @@
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
                             <div class="flex justify-between items-start mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 opacity-90"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI / ML</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">AI /
+                                    ML</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">Deep Learning Workshop</h3>
                             <p class="text-purple-400 text-sm font-medium mb-3">Technical Institution</p>
@@ -1834,9 +2516,16 @@
                                 Intensive 3-day workshop covering Deep Learning, Data Science, and ML fundamentals.
                             </p>
                         </div>
-                        <a href="https://drive.google.com/file/d/1GgfT5chQ-7B6eerjhZ5ZKBDYd43FPyYI/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                        <a href="https://drive.google.com/file/d/1GgfT5chQ-7B6eerjhZ5ZKBDYd43FPyYI/view?usp=drive_link"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1846,18 +2535,32 @@
                     <div class="flex flex-col h-full justify-between gap-6">
                         <div>
                             <div class="flex justify-between items-start mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 opacity-90"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                                <span class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Programming</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-purple-400 opacity-90">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                                <span
+                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Programming</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">C Programming Foundation</h3>
                             <p class="text-purple-400 text-sm font-medium mb-3">Technical Institution</p>
                             <p class="text-gray-400/80 text-sm leading-[1.8]">
-                                Mastery of foundational programming structures including loops, arrays, and memory pointers.
+                                Mastery of foundational programming structures including loops, arrays, and memory
+                                pointers.
                             </p>
                         </div>
-                        <a href="https://drive.google.com/file/d/1GSb11it-HMk1FV-dfHwTKF6480FHZ1JR/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
+                        <a href="https://drive.google.com/file/d/1GSb11it-HMk1FV-dfHwTKF6480FHZ1JR/view?usp=drive_link"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 group-hover:text-white transition">
                             View Certificate
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -1870,19 +2573,24 @@
     <section id="services" class="relative z-20 py-32 mt-16">
         <div class="max-w-7xl mx-auto px-6">
             <h3 class="text-xs font-semibold tracking-widest text-textMuted uppercase mb-3 ml-1">What I Do</h3>
-            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span class="text-gray-500">Expertise</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span
+                    class="text-gray-500">Expertise</span></h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8" style="perspective: 2000px;">
-                
+
                 <!-- AI Engineering -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-white mb-3">AI Engineering</h3>
                         <p class="text-gray-400 text-sm leading-[1.7]">
-                            Building intelligent systems, fine-tuning RAG pipelines, and integrating LLMs into robust, production-ready applications.
+                            Building intelligent systems, fine-tuning RAG pipelines, and integrating LLMs into robust,
+                            production-ready applications.
                         </p>
                     </div>
                 </div>
@@ -1890,12 +2598,17 @@
                 <!-- Full Stack Development -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-white mb-3">Full Stack Development</h3>
                         <p class="text-gray-400 text-sm leading-[1.7]">
-                            Crafting premium, highly responsive user interfaces and robust scalable backend APIs with modern web frameworks.
+                            Crafting premium, highly responsive user interfaces and robust scalable backend APIs with
+                            modern web frameworks.
                         </p>
                     </div>
                 </div>
@@ -1903,12 +2616,18 @@
                 <!-- Data / Backend Architecture -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-white mb-3">Data Architecture</h3>
                         <p class="text-gray-400 text-sm leading-[1.7]">
-                            Designing complex database schemas, efficient data processing pipelines, and secure cloud infrastructure.
+                            Designing complex database schemas, efficient data processing pipelines, and secure cloud
+                            infrastructure.
                         </p>
                     </div>
                 </div>
@@ -1922,18 +2641,22 @@
     <section id="contact" class="relative z-20 pt-32 pb-40 mt-16 overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 text-center relative">
             <!-- Intense but minimal central glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-accentPurple/20 to-blue-500/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-accentPurple/20 to-blue-500/10 blur-[120px] rounded-full pointer-events-none z-0">
+            </div>
+
             <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-12 relative z-10">
                 Let's Build AI Products <br class="hidden md:block"><span class="text-gray-500">That Matter</span>
             </h2>
-            
-            <a href="mailto:sujithsunil4818@gmail.com" class="inline-flex items-center justify-center px-12 py-5 rounded-full text-white font-medium bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 backdrop-blur-md shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:shadow-[0_0_60px_rgba(255,255,255,0.15)] relative z-10 text-xl hover:-translate-y-2">
+
+            <a href="mailto:sujithsunil4818@gmail.com"
+                class="inline-flex items-center justify-center px-12 py-5 rounded-full text-white font-medium bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 backdrop-blur-md shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:shadow-[0_0_60px_rgba(255,255,255,0.15)] relative z-10 text-xl hover:-translate-y-2">
                 Let's Connect
             </a>
 
             <div class="mt-8 flex justify-center gap-6 text-gray-400 relative z-10 text-sm font-medium">
-                <a href="mailto:sujithsunil4818@gmail.com" class="hover:text-white transition">sujithsunil4818@gmail.com</a>
+                <a href="mailto:sujithsunil4818@gmail.com"
+                    class="hover:text-white transition">sujithsunil4818@gmail.com</a>
                 <span class="text-gray-700">|</span>
                 <a href="tel:+919849351572" class="hover:text-white transition">+91 98493 51572</a>
             </div>
@@ -1943,20 +2666,37 @@
     <!-- Footer -->
     <footer class="relative z-20 border-t border-white/5 bg-[#05070d]">
         <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            
+
             <div class="text-gray-500 text-sm font-medium">
                 &copy; 2025 Sanisetty Sujith Kumar. All rights reserved.
             </div>
-            
+
             <div class="flex items-center gap-6">
-                <a href="https://github.com/sujith0466" target="_blank" class="text-gray-500 hover:text-white transition transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/sujith0466" target="_blank"
+                    class="text-gray-500 hover:text-white transition transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/sujith-kumar-802059298/" target="_blank" class="text-gray-500 hover:text-white transition transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://www.linkedin.com/in/sujith-kumar-802059298/" target="_blank"
+                    class="text-gray-500 hover:text-white transition transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
                 </a>
-                <a href="mailto:sujithsunil4818@gmail.com" class="text-gray-500 hover:text-white transition transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:sujithsunil4818@gmail.com"
+                    class="text-gray-500 hover:text-white transition transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
                 </a>
             </div>
 
@@ -1964,30 +2704,30 @@
     </footer>
 
 </body>
-    <script>
-        // Mobile Navigation Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+<script>
+    // Mobile Navigation Toggle Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                void mobileMenu.offsetWidth; // trigger reflow
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-            }
-        });
+    mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            void mobileMenu.offsetWidth; // trigger reflow
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+        }
+    });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-            });
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
         });
-    </script>
+    });
+</script>
+
 </html>
-
