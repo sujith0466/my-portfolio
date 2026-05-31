@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sujithkumar-ai-ds-mernstack.netlify.app/sitemap.xml
