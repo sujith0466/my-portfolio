@@ -1261,7 +1261,144 @@
                 padding-top: 6rem !important;
             }
         }
-    </style>
+        /* Premium Projects Section CSS */
+        .filter-btn {
+            padding: 10px 22px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .filter-btn.active {
+            background: rgba(139, 92, 246, 0.15);
+            border-color: rgba(139, 92, 246, 0.4);
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.01));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        .premium-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 25px var(--hover-color, rgba(139,92,246,0.15));
+            border-color: transparent;
+        }
+        .premium-card:hover::before {
+            opacity: 1;
+            background: linear-gradient(to bottom, var(--hover-color, rgba(139,92,246,0.5)), rgba(255,255,255,0.02));
+        }
+
+        .premium-card-img {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-card:hover .premium-card-img {
+            transform: scale(1.03);
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #d1d5db;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .premium-card:hover .tech-pill {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Carousel Styles */
+        .carousel-slide {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            position: absolute;
+            inset: 0;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+            position: relative;
+        }
+        
+        .carousel-dot {
+            transition: all 0.4s ease;
+        }
+        .carousel-dot.active {
+            width: 24px;
+            background: #fff;
+            opacity: 1;
+        }
+
+        /* Grid Filtering Animations */
+        .grid-item {
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: top center;
+        }
+        .grid-item.hide {
+            display: none;
+        }
+        .grid-item.anim-out {
+            opacity: 0;
+            transform: scale(0.95) translateY(10px);
+        }
+        
+        /* Staggered Entrance */
+        .stagger-in {
+            animation: staggerFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes staggerFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
 </head>
 
 <body>
@@ -1848,336 +1985,697 @@
     </section>
 
     <!-- Featured Projects Section -->
+    
+    
+    
+    
+    
+    
+    
     <section id="projects" class="relative z-20 pt-32 pb-24 bg-gradient-to-b from-transparent to-[#05070d]">
-        <div class="max-w-7xl mx-auto px-6">
-
-            <!-- Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-                <div>
-                    <h3 class="text-xs font-semibold tracking-widest text-accentPurple uppercase mb-3 ml-1">FEATURED AI
-                        PROJECTS</h3>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Featured <span
-                            class="text-gray-500">Projects</span></h2>
+        <div class="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12">
+            
+            <!-- Premium Header -->
+            <div class="text-center mb-16 relative">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[180px] bg-accentPurple/20 blur-[120px] pointer-events-none rounded-full"></div>
+                
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold tracking-[0.2em] text-gray-300 uppercase mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.03)] hover:bg-white/10 transition-colors">
+                    🚀 FEATURED WORK
+                </span>
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
+                    Projects <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-blue-400 drop-shadow-sm">Gallery</span>
+                </h2>
+                <p class="text-gray-400 text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                    AI Agents, Full Stack Products, Data Science Solutions and Hackathon Winning Projects.
+                </p>
+            </div>
+            
+            <!-- Section Stats -->
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-20 relative z-10 px-4">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">8+</div>
+                    <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mt-1">Projects</div>
                 </div>
-                <a href="#projects"
-                    class="text-gray-400 hover:text-white flex items-center gap-2 font-medium transition text-sm">
-                    View All Projects &rarr;
-                </a>
+                <div class="w-px h-10 bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">4</div>
+                    <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mt-1">Hackathons</div>
+                </div>
+                <div class="w-px h-10 bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">3</div>
+                    <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mt-1">AI Platforms</div>
+                </div>
+                <div class="w-px h-10 bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">10+</div>
+                    <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mt-1">Technologies</div>
+                </div>
             </div>
 
-            <!-- 3D Panoramic Grid -->
-            <div class="projects-perspective">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <!-- Glassmorphism Featured Carousel -->
+            <div class="relative w-full mx-auto mb-28 group" id="featured-carousel">
+                <div class="relative rounded-2xl md:rounded-[32px] border border-white/10 bg-white/[0.02] backdrop-blur-2xl shadow-2xl overflow-hidden aspect-auto min-h-[600px] md:min-h-[550px]">
 
-                    <!-- Card 0: FlowMind AI (Featured) -->
-                    <div class="project-card tl flowmind">
-                        <div class="project-img-wrapper relative">
-                            <div
-                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#8b5cf6]/20 border border-[#8b5cf6]/30 text-[#8b5cf6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(139,92,246,0.3)]">
-                                Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FM"
-                                alt="FlowMind AI">
-                            <div class="project-img-overlay"></div>
+                    <div class="carousel-slide active w-full h-full flex flex-col md:flex-row">
+                        <!-- Left Content -->
+                        <div class="w-full md:w-1/2 p-6 md:p-14 pb-24 md:pb-28 flex flex-col justify-center z-10 bg-[#05070d] md:bg-transparent md:bg-gradient-to-r md:from-[#05070d]/90 md:to-transparent order-2 md:order-1 relative">
+                            <!-- Subtle mobile top gradient blend -->
+                            <div class="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-[#05070d] to-transparent md:hidden -mt-12 opacity-100 z-0"></div>
+                            
+                            <!-- Project Status Badge -->
+                            <div class="mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white text-[10px] md:text-[11px] font-semibold backdrop-blur-md shadow-sm">
+                                    🟢 Production Ready
+                                </span>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">AI AGENT PLATFORM</span><span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">Google for Developers • Build with AI</span><span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">Vibe2Ship Challenge</span>
+                            </div>
+                            <h3 class="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight">DeadlineOS</h3>
+                            <p class="!text-gray-200 text-sm md:text-base leading-relaxed mb-6 max-w-lg relative z-20">
+                                An AI-powered autonomous productivity operating system featuring intelligent planning, digital twin simulation, rescue intelligence, goal management, document intelligence, and multi-agent orchestration for personal productivity.
+                            </p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mb-6">
+                                <li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Multi-Agent Architecture</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Digital Twin Simulation</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> AI Planner</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Rescue Intelligence</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Document Intelligence</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Analytics Dashboard</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-1.5 md:gap-2 mb-6">
+                                <span class="tech-pill shadow-sm"><span>⚛️</span> React</span><span class="tech-pill shadow-sm"><span>🟦</span> TypeScript</span><span class="tech-pill shadow-sm"><span>🐍</span> Flask</span><span class="tech-pill shadow-sm"><span>🐘</span> PostgreSQL</span><span class="tech-pill shadow-sm"><span>🧠</span> Gemini AI</span><span class="tech-pill shadow-sm"><span>🤖</span> Google AI Studio</span><span class="tech-pill shadow-sm"><span>🎨</span> Tailwind CSS</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-8 md:mb-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300 text-[10px] md:text-[11px] font-medium backdrop-blur-sm shadow-sm">🏆 Google Agent Labs Hackathon 2026</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-auto w-full">
+                                
+        <a href="https://github.com/sujith0466/DeadLine-OS" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-all shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:-translate-y-0.5 min-h-[44px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View Code
+        </a>
+        <a href="https://dead-line-os.vercel.app" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-purple-600/20 border border-purple-500/50 text-white text-sm font-medium shadow-[0_0_15px_rgba(139, 92, 246, 0.4)] hover:bg-purple-600/40 hover:shadow-[0_0_25px_rgba(139, 92, 246, 0.4)] transition-all hover:-translate-y-0.5 min-h-[44px]">
+            Live Demo
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    
+                            </div>
                         </div>
-                        <div class="project-content">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">FlowMind AI</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    An intelligent multi-agent productivity platform that orchestrates specialized AI
-                                    agents to automate workflows, generate execution plans, summarize information, and
-                                    help users move from ideas to execution.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mt-1">
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">React</span>
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Flask</span>
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Supabase</span>
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Gemini
-                                    AI</span>
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Tailwind
-                                    CSS</span>
-                                <span
-                                    class="project-tag !border-purple-500/30 !text-purple-400 !bg-purple-500/10">Framer
-                                    Motion</span>
-                            </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/Flowmind_AI" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://flowmind-ai-six.vercel.app" target="_blank"
-                                    class="project-btn project-btn-primary !bg-purple-600/20 !border-purple-500/50 !shadow-[0_0_15px_rgba(139,92,246,0.2)] hover:!bg-purple-600/40 hover:!shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-                                    Live Demo
-                                </a>
-                            </div>
+                        <!-- Right Image -->
+                        <div class="w-full md:w-1/2 h-64 sm:h-72 md:h-full relative overflow-hidden bg-[#0a0f1c] order-1 md:order-2">
+                            <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#05070d] via-transparent to-transparent z-10 mix-blend-overlay"></div>
+                            <img src="https://placehold.co/800x600/151822/2a3143?text=DOS" alt="DeadlineOS" class="w-full h-full object-cover opacity-80 object-center transition-transform duration-1000 group-hover:scale-105">
                         </div>
                     </div>
+    
+                    <div class="carousel-slide  w-full h-full flex flex-col md:flex-row">
+                        <!-- Left Content -->
+                        <div class="w-full md:w-1/2 p-6 md:p-14 pb-24 md:pb-28 flex flex-col justify-center z-10 bg-[#05070d] md:bg-transparent md:bg-gradient-to-r md:from-[#05070d]/90 md:to-transparent order-2 md:order-1 relative">
+                            <!-- Subtle mobile top gradient blend -->
+                            <div class="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-[#05070d] to-transparent md:hidden -mt-12 opacity-100 z-0"></div>
+                            
+                            <!-- Project Status Badge -->
+                            <div class="mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white text-[10px] md:text-[11px] font-semibold backdrop-blur-md shadow-sm">
+                                    🏆 OpenAI Hackathon Project
+                                </span>
+                            </div>
 
-                    <!-- Card 1: VoteWise AI (Top Left) -->
-                    <div class="project-card tl votewise">
-                        <div class="project-img-wrapper relative">
-                            <div
-                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 text-[#3b82f6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(59,130,246,0.3)]">
-                                Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=VW"
-                                alt="VoteWise AI">
-                            <div class="project-img-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <div>
-                                <div class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold tracking-widest uppercase mb-3 backdrop-blur-sm shadow-[0_0_10px_rgba(139,92,246,0.2)]">
-                                    PromptWars Challenge 2
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">VoteWise-AI</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    AI-powered election awareness and voter assistance platform built for PromptWars Virtual Challenge 2.
-                                </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">Featured</span><span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">OpenAI x Outskill Shortlist</span>
                             </div>
-                            <div class="mt-2">
-                                <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-2 block">Tech Stack</span>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Python</span>
-                                    <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Flask</span>
-                                    <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Gemini AI</span>
-                                    <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">JavaScript</span>
-                                    <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Bootstrap</span>
-                                </div>
+                            <h3 class="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight">FlowMind AI</h3>
+                            <p class="!text-gray-200 text-sm md:text-base leading-relaxed mb-6 max-w-lg relative z-20">
+                                An intelligent multi-agent productivity platform that orchestrates specialized AI agents to automate workflows, generate execution plans, summarize information, and help users move from ideas to execution.
+                            </p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mb-6">
+                                <li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Multi-Agent Orchestration</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Workflow Automation</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Execution Planning</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-purple-500 mr-2 text-[10px]">✦</span> Intelligent Summarization</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-1.5 md:gap-2 mb-6">
+                                <span class="tech-pill shadow-sm"><span>⚛️</span> React</span><span class="tech-pill shadow-sm"><span>🐍</span> Flask</span><span class="tech-pill shadow-sm"><span>🔥</span> Supabase</span><span class="tech-pill shadow-sm"><span>🧠</span> Gemini AI</span><span class="tech-pill shadow-sm"><span>🎨</span> Tailwind CSS</span><span class="tech-pill shadow-sm"><span>✨</span> Framer Motion</span>
                             </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/votewise-AI" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://votewise-ai.onrender.com/" target="_blank"
-                                    class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                                    Live Demo
-                                </a>
+                            <div class="flex flex-wrap gap-2 mb-8 md:mb-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300 text-[10px] md:text-[11px] font-medium backdrop-blur-sm shadow-sm">⭐ Overall Evaluation Score: 88/100</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300 text-[10px] md:text-[11px] font-medium backdrop-blur-sm shadow-sm">🏆 Top 100 out of 10,000+</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-auto w-full">
+                                
+        <a href="https://github.com/sujith0466/Flowmind_AI" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-all shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:-translate-y-0.5 min-h-[44px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View Code
+        </a>
+        <a href="https://flowmind-ai-six.vercel.app" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-purple-600/20 border border-purple-500/50 text-white text-sm font-medium shadow-[0_0_15px_rgba(139, 92, 246, 0.4)] hover:bg-purple-600/40 hover:shadow-[0_0_25px_rgba(139, 92, 246, 0.4)] transition-all hover:-translate-y-0.5 min-h-[44px]">
+            Live Demo
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Card 2: SchemaFlow AI (Top Middle) -->
-                    <div class="project-card tm schemaflow">
-                        <div class="project-img-wrapper">
-                            <img src="https://placehold.co/800x600/151822/2a3143?text=SF" alt="SchemaFlow AI">
-                            <div class="project-img-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">SchemaFlow-AI</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    Intelligent schema generation and relationship visualization system built for
-                                    internship backend workflows
-                                </p>
-                            </div>
-                            <div class="mt-2">
-                                <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-2 block">Tech Stack</span>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">React</span>
-                                    <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Tailwind</span>
-                                    <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Flask</span>
-                                    <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Gemini AI</span>
-                                    <span class="project-tag !border-indigo-500/30 !text-indigo-400 !bg-indigo-500/10">Supabase</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/SchemaFlow-AI" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://schema-flow-ai.vercel.app/" target="_blank"
-                                    class="project-btn project-btn-primary !bg-indigo-600/20 !border-indigo-500/50 !shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:!bg-indigo-600/40 hover:!shadow-[0_0_25px_rgba(99,102,241,0.4)]">
-                                    Live Demo
-                                </a>
-                            </div>
+                        <!-- Right Image -->
+                        <div class="w-full md:w-1/2 h-64 sm:h-72 md:h-full relative overflow-hidden bg-[#0a0f1c] order-1 md:order-2">
+                            <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#05070d] via-transparent to-transparent z-10 mix-blend-overlay"></div>
+                            <img src="https://placehold.co/800x600/151822/2a3143?text=FM" alt="FlowMind AI" class="w-full h-full object-cover opacity-80 object-center transition-transform duration-1000 group-hover:scale-105">
                         </div>
                     </div>
+    
+                    <div class="carousel-slide  w-full h-full flex flex-col md:flex-row">
+                        <!-- Left Content -->
+                        <div class="w-full md:w-1/2 p-6 md:p-14 pb-24 md:pb-28 flex flex-col justify-center z-10 bg-[#05070d] md:bg-transparent md:bg-gradient-to-r md:from-[#05070d]/90 md:to-transparent order-2 md:order-1 relative">
+                            <!-- Subtle mobile top gradient blend -->
+                            <div class="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-[#05070d] to-transparent md:hidden -mt-12 opacity-100 z-0"></div>
+                            
+                            <!-- Project Status Badge -->
+                            <div class="mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white text-[10px] md:text-[11px] font-semibold backdrop-blur-md shadow-sm">
+                                    🚧 Active Development
+                                </span>
+                            </div>
 
-                    <!-- Card 3: FairAI Pro (Top Right) -->
-                    <div class="project-card tr fairai">
-                        <div class="project-img-wrapper relative">
-                            <div
-                                class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#10b981]/20 border border-[#10b981]/30 text-[#10b981] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(16,185,129,0.3)]">
-                                Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FA"
-                                alt="FairAI Pro">
-                            <div class="project-img-overlay"></div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">Premium Prototype</span>
+                            </div>
+                            <h3 class="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight">CareSync AI</h3>
+                            <p class="!text-gray-200 text-sm md:text-base leading-relaxed mb-6 max-w-lg relative z-20">
+                                Next-generation healthcare companion AI providing personalized predictive diagnostics, seamless integration with IoT wearables, and intelligent triaging. Currently in active development.
+                            </p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mb-6">
+                                <li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-pink-500 mr-2 text-[10px]">✦</span> IoT Wearable Sync</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-pink-500 mr-2 text-[10px]">✦</span> Predictive Diagnostics</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-pink-500 mr-2 text-[10px]">✦</span> Smart Triaging</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-pink-500 mr-2 text-[10px]">✦</span> Encrypted Health Vault</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-1.5 md:gap-2 mb-6">
+                                <span class="tech-pill shadow-sm"><span>⚛️</span> React</span><span class="tech-pill shadow-sm"><span>🐍</span> Python</span><span class="tech-pill shadow-sm"><span>🧠</span> Deep Learning</span><span class="tech-pill shadow-sm"><span>☁️</span> AWS</span><span class="tech-pill shadow-sm"><span>📱</span> React Native</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-8 md:mb-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300 text-[10px] md:text-[11px] font-medium backdrop-blur-sm shadow-sm">🔒 Confidential WIP</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-auto w-full">
+                                
+            <div class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-medium cursor-not-allowed border-dashed backdrop-blur-sm min-h-[44px]">
+                🚧 Premium Teaser &bull; Development in Progress
+            </div>
+        
+                            </div>
                         </div>
-                        <div class="project-content">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">FairAI Pro</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    Bias detection and mitigation platform for ML datasets with explainability (Google
-                                    Solution Challenge 2026)
-                                </p>
-                            </div>
-                            <div class="mt-2">
-                                <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-2 block">Tech Stack</span>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Python</span>
-                                    <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Flask</span>
-                                    <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Machine Learning</span>
-                                    <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Pandas</span>
-                                    <span class="project-tag !border-emerald-500/30 !text-emerald-400 !bg-emerald-500/10">Scikit-Learn</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/FairAI-Pro" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://fair-ai-pro.vercel.app/" target="_blank"
-                                    class="project-btn project-btn-primary !bg-emerald-600/20 !border-emerald-500/50 !shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:!bg-emerald-600/40 hover:!shadow-[0_0_25px_rgba(16,185,129,0.4)]">
-                                    Live Demo
-                                </a>
-                            </div>
+                        <!-- Right Image -->
+                        <div class="w-full md:w-1/2 h-64 sm:h-72 md:h-full relative overflow-hidden bg-[#0a0f1c] order-1 md:order-2">
+                            <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#05070d] via-transparent to-transparent z-10 mix-blend-overlay"></div>
+                            <img src="https://placehold.co/800x600/151822/2a3143?text=CSAI" alt="CareSync AI" class="w-full h-full object-cover opacity-80 object-center transition-transform duration-1000 group-hover:scale-105">
                         </div>
                     </div>
+    
+                    <div class="carousel-slide  w-full h-full flex flex-col md:flex-row">
+                        <!-- Left Content -->
+                        <div class="w-full md:w-1/2 p-6 md:p-14 pb-24 md:pb-28 flex flex-col justify-center z-10 bg-[#05070d] md:bg-transparent md:bg-gradient-to-r md:from-[#05070d]/90 md:to-transparent order-2 md:order-1 relative">
+                            <!-- Subtle mobile top gradient blend -->
+                            <div class="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-[#05070d] to-transparent md:hidden -mt-12 opacity-100 z-0"></div>
+                            
+                            <!-- Project Status Badge -->
+                            <div class="mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white text-[10px] md:text-[11px] font-semibold backdrop-blur-md shadow-sm">
+                                    🏆 PromptWars Challenge 2
+                                </span>
+                            </div>
 
-                    <!-- Card 3.5: EcoPilot (New) -->
-                    <div class="project-card group">
-                        <div class="project-img-wrapper relative">
-                            <div class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-[#14b8a6]/20 border border-[#14b8a6]/30 text-[#14b8a6] text-xs font-semibold backdrop-blur-md shadow-[0_0_10px_rgba(20,184,166,0.3)]">
-                                Featured</div>
-                            <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=EP" alt="EcoPilot">
-                            <div class="project-img-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <div>
-                                <div class="inline-block px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-[10px] font-bold tracking-widest uppercase mb-3 backdrop-blur-sm shadow-[0_0_10px_rgba(20,184,166,0.2)]">
-                                    PromptWars Challenge 3
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-2">EcoPilot</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    AI-powered carbon footprint awareness platform that helps users calculate, track, and reduce their environmental impact through intelligent recommendations and sustainability insights.
-                                </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[9px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">PromptWars Challenge 2</span>
                             </div>
-                            <div class="mt-2">
-                                <span class="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-2 block">Tech Stack</span>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">React</span>
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">Flask</span>
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">SQLite</span>
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">Supabase</span>
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">Gemini AI</span>
-                                    <span class="project-tag !border-teal-500/30 !text-teal-400 !bg-teal-500/10">Tailwind CSS</span>
-                                </div>
+                            <h3 class="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight">VoteWise-AI</h3>
+                            <p class="!text-gray-200 text-sm md:text-base leading-relaxed mb-6 max-w-lg relative z-20">
+                                AI-powered election awareness and voter assistance platform built for PromptWars Virtual Challenge 2. Features sentiment analysis and candidate insights.
+                            </p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mb-6">
+                                <li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-blue-500 mr-2 text-[10px]">✦</span> Sentiment Analysis</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-blue-500 mr-2 text-[10px]">✦</span> Voter Assistance Bot</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-blue-500 mr-2 text-[10px]">✦</span> Candidate Insights</li><li class="flex items-center text-[12px] md:text-[13px] text-gray-300 font-light"><span class="text-blue-500 mr-2 text-[10px]">✦</span> Real-time Metrics</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-1.5 md:gap-2 mb-6">
+                                <span class="tech-pill shadow-sm"><span>🐍</span> Python</span><span class="tech-pill shadow-sm"><span>⚙️</span> Flask</span><span class="tech-pill shadow-sm"><span>🧠</span> Gemini AI</span><span class="tech-pill shadow-sm"><span>🟨</span> JavaScript</span><span class="tech-pill shadow-sm"><span>🅱️</span> Bootstrap</span>
                             </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/EcoPilot_AI" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://eco-pilot-ai-wheat.vercel.app/" target="_blank"
-                                    class="project-btn project-btn-primary !bg-teal-600/20 !border-teal-500/50 !shadow-[0_0_15px_rgba(20,184,166,0.2)] hover:!bg-teal-600/40 hover:!shadow-[0_0_25px_rgba(20,184,166,0.4)]">
-                                    Live Demo
-                                </a>
+                            <div class="flex flex-wrap gap-2 mb-8 md:mb-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300 text-[10px] md:text-[11px] font-medium backdrop-blur-sm shadow-sm">🚀 PromptWars Virtual Challenge</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 mt-auto w-full">
+                                
+        <a href="https://github.com/sujith0466/votewise-AI" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-all shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:-translate-y-0.5 min-h-[44px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View Code
+        </a>
+        <a href="https://votewise-ai.onrender.com/" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 md:py-3 rounded-full bg-blue-600/20 border border-blue-500/50 text-white text-sm font-medium shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] hover:bg-blue-600/40 hover:shadow-[0_0_25px_rgba(59, 130, 246, 0.4)] transition-all hover:-translate-y-0.5 min-h-[44px]">
+            Live Demo
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    
                             </div>
                         </div>
-                    </div>
-
-
-                    <!-- Card 5: Credit Card Fraud Detection (Bottom Middle) -->
-                    <div class="project-card bm">
-                        <div class="project-img-wrapper">
-                            <img src="https://placehold.co/800x600/151822/2a3143?text=CFD"
-                                alt="Credit Card Fraud Detection">
-                            <div class="project-img-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Credit Card Fraud Detection</h3>
-                                <p class="text-gray-400 text-sm leading-[1.7]">
-                                    ML project detecting fraudulent transactions using SMOTE, Random Forest, and XGBoost
-                                    on real-world credit card data.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mt-1">
-                                <span
-                                    class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Python</span>
-                                <span
-                                    class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Scikit-learn</span>
-                                <span class="project-tag !border-blue-500/30 !text-blue-400 !bg-blue-500/10">Machine
-                                    Learning</span>
-                            </div>
-                            <div class="flex gap-3 mt-4">
-                                <a href="https://github.com/sujith0466/Credit_card_fraud_detection" target="_blank"
-                                    class="project-btn project-btn-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                        </path>
-                                    </svg>
-                                    View Code
-                                </a>
-                                <a href="https://credit-card-fraud-detection-99kl.onrender.com" target="_blank"
-                                    class="project-btn project-btn-primary !bg-blue-600/20 !border-blue-500/50 !shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:!bg-blue-600/40 hover:!shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                                    Live Demo
-                                </a>
-                            </div>
+                        <!-- Right Image -->
+                        <div class="w-full md:w-1/2 h-64 sm:h-72 md:h-full relative overflow-hidden bg-[#0a0f1c] order-1 md:order-2">
+                            <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#05070d] via-transparent to-transparent z-10 mix-blend-overlay"></div>
+                            <img src="https://placehold.co/800x600/151822/2a3143?text=VW" alt="VoteWise-AI" class="w-full h-full object-cover opacity-80 object-center transition-transform duration-1000 group-hover:scale-105">
                         </div>
                     </div>
+    
+                <!-- Controls -->
+                <div class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-[#0a0f1c]/80 backdrop-blur-xl px-5 py-3 rounded-full border border-white/10 shadow-2xl">
+                    <button id="carousel-prev" class="text-gray-400 hover:text-white transition p-2 md:p-1 hover:-translate-x-0.5 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="flex gap-2.5">
+<button class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-500 hover:bg-white transition-all duration-300 active mx-1 relative before:content-[''] before:absolute before:-inset-3 before:bg-transparent"></button>
+<button class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-500 hover:bg-white transition-all duration-300  mx-1 relative before:content-[''] before:absolute before:-inset-3 before:bg-transparent"></button>
+<button class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-500 hover:bg-white transition-all duration-300  mx-1 relative before:content-[''] before:absolute before:-inset-3 before:bg-transparent"></button>
+<button class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-gray-500 hover:bg-white transition-all duration-300  mx-1 relative before:content-[''] before:absolute before:-inset-3 before:bg-transparent"></button>
 
-
-
-
+                    </div>
+                    <button id="carousel-next" class="text-gray-400 hover:text-white transition p-2 md:p-1 hover:translate-x-0.5 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                 </div>
-
             </div>
 
-            <div class="mt-16 text-center">
-                <a href="https://github.com/sujith0466" target="_blank" class="github-btn">
-                    View More on GitHub
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-2.5 md:gap-3 mt-12 md:mt-16 mb-12 relative z-10 px-2" id="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai-agent">AI Agents</button>
+                <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+                <button class="filter-btn" data-filter="open-source">Open Source</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10" id="projects-grid">
+
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="ai-agent full-stack hackathon" style="--hover-color: rgba(139, 92, 246, 0.4); animation-delay: 0.0s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">AI AGENT PLATFORM</span><span class="inline-block px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Google for Developers • Build with AI</span><span class="inline-block px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Vibe2Ship Challenge</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=DOS" alt="DeadlineOS" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🟢 Production Ready
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors tracking-tight leading-tight">DeadlineOS</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            An AI-powered autonomous productivity operating system featuring intelligent planning, digital twin simulation, rescue intelligence, goal management, document intelligence, and multi-agent orchestration for personal productivity.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>Multi-Agent Architecture</li><li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>Digital Twin Simulation</li><li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>AI Planner</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>⚛️</span> React</span><span class="tech-pill"><span>🟦</span> TypeScript</span><span class="tech-pill"><span>🐍</span> Flask</span><span class="tech-pill"><span>🐘</span> PostgreSQL</span><span class="tech-pill"><span>🧠</span> Gemini AI</span><span class="tech-pill"><span>🤖</span> Google AI Studio</span><span class="tech-pill"><span>🎨</span> Tailwind CSS</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/DeadLine-OS" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://dead-line-os.vercel.app" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-purple-600/20 border border-purple-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(139, 92, 246, 0.4)] hover:bg-purple-600/40 hover:shadow-[0_0_25px_rgba(139, 92, 246, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="ai-agent full-stack hackathon" style="--hover-color: rgba(139, 92, 246, 0.4); animation-delay: 0.05s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Featured</span><span class="inline-block px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">OpenAI x Outskill Shortlist</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FM" alt="FlowMind AI" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🏆 OpenAI Hackathon Project
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors tracking-tight leading-tight">FlowMind AI</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            An intelligent multi-agent productivity platform that orchestrates specialized AI agents to automate workflows, generate execution plans, summarize information, and help users move from ideas to execution.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>Multi-Agent Orchestration</li><li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>Workflow Automation</li><li class="text-[11px] text-gray-400 truncate"><span class="text-purple-500 mr-2">✦</span>Execution Planning</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>⚛️</span> React</span><span class="tech-pill"><span>🐍</span> Flask</span><span class="tech-pill"><span>🔥</span> Supabase</span><span class="tech-pill"><span>🧠</span> Gemini AI</span><span class="tech-pill"><span>🎨</span> Tailwind CSS</span><span class="tech-pill"><span>✨</span> Framer Motion</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/Flowmind_AI" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://flowmind-ai-six.vercel.app" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-purple-600/20 border border-purple-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(139, 92, 246, 0.4)] hover:bg-purple-600/40 hover:shadow-[0_0_25px_rgba(139, 92, 246, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="ai-agent full-stack machine-learning" style="--hover-color: rgba(236, 72, 153, 0.4); animation-delay: 0.1s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-pink-500/10 border border-pink-500/30 text-pink-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Premium Prototype</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=CSAI" alt="CareSync AI" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🚧 Active Development
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors tracking-tight leading-tight">CareSync AI</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            Next-generation healthcare companion AI providing personalized predictive diagnostics, seamless integration with IoT wearables, and intelligent triaging. Currently in active development.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-pink-500 mr-2">✦</span>IoT Wearable Sync</li><li class="text-[11px] text-gray-400 truncate"><span class="text-pink-500 mr-2">✦</span>Predictive Diagnostics</li><li class="text-[11px] text-gray-400 truncate"><span class="text-pink-500 mr-2">✦</span>Smart Triaging</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>⚛️</span> React</span><span class="tech-pill"><span>🐍</span> Python</span><span class="tech-pill"><span>🧠</span> Deep Learning</span><span class="tech-pill"><span>☁️</span> AWS</span><span class="tech-pill"><span>📱</span> React Native</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+            <div class="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 md:py-2 rounded-full bg-white/5 border border-white/10 text-gray-500 text-xs font-medium cursor-not-allowed border-dashed min-h-[44px] md:min-h-[36px]">
+                🚧 Coming Soon
+            </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="ai-agent machine-learning hackathon" style="--hover-color: rgba(59, 130, 246, 0.4); animation-delay: 0.15000000000000002s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">PromptWars Challenge 2</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=VW" alt="VoteWise-AI" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🏆 PromptWars Challenge 2
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight leading-tight">VoteWise-AI</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            AI-powered election awareness and voter assistance platform built for PromptWars Virtual Challenge 2. Features sentiment analysis and candidate insights.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>Sentiment Analysis</li><li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>Voter Assistance Bot</li><li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>Candidate Insights</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>🐍</span> Python</span><span class="tech-pill"><span>⚙️</span> Flask</span><span class="tech-pill"><span>🧠</span> Gemini AI</span><span class="tech-pill"><span>🟨</span> JavaScript</span><span class="tech-pill"><span>🅱️</span> Bootstrap</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/votewise-AI" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://votewise-ai.onrender.com/" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-blue-600/20 border border-blue-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] hover:bg-blue-600/40 hover:shadow-[0_0_25px_rgba(59, 130, 246, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="ai-agent full-stack hackathon" style="--hover-color: rgba(16, 185, 129, 0.4); animation-delay: 0.2s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">PromptWars Challenge 3</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=EP" alt="EcoPilot" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🏆 PromptWars Challenge 3
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight leading-tight">EcoPilot</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            AI-powered carbon footprint awareness platform that helps users calculate, track, and reduce their environmental impact through intelligent recommendations.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Carbon Tracking</li><li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Smart Recommendations</li><li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Data Visualization</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>⚛️</span> React</span><span class="tech-pill"><span>🐍</span> Flask</span><span class="tech-pill"><span>🗄️</span> SQLite</span><span class="tech-pill"><span>🔥</span> Supabase</span><span class="tech-pill"><span>🧠</span> Gemini AI</span><span class="tech-pill"><span>🎨</span> Tailwind CSS</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/EcoPilot_AI" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://eco-pilot-ai-wheat.vercel.app/" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-emerald-600/20 border border-emerald-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(16, 185, 129, 0.4)] hover:bg-emerald-600/40 hover:shadow-[0_0_25px_rgba(16, 185, 129, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="full-stack ai-agent" style="--hover-color: rgba(99, 102, 241, 0.4); animation-delay: 0.25s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Featured</span><span class="inline-block px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Workflow Utility</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=SF" alt="SchemaFlow AI" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🟢 Production Ready
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors tracking-tight leading-tight">SchemaFlow AI</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            Intelligent schema generation and relationship visualization system built for internship backend workflows. Instantly translates natural language into scalable DB schemas.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-indigo-500 mr-2">✦</span>Natural Language to SQL</li><li class="text-[11px] text-gray-400 truncate"><span class="text-indigo-500 mr-2">✦</span>ER Diagram Viz</li><li class="text-[11px] text-gray-400 truncate"><span class="text-indigo-500 mr-2">✦</span>Schema Export</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>⚛️</span> React</span><span class="tech-pill"><span>🎨</span> Tailwind CSS</span><span class="tech-pill"><span>🐍</span> Flask</span><span class="tech-pill"><span>🧠</span> Gemini AI</span><span class="tech-pill"><span>🔥</span> Supabase</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/SchemaFlow-AI" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://schema-flow-ai.vercel.app/" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-indigo-600/20 border border-indigo-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(99, 102, 241, 0.4)] hover:bg-indigo-600/40 hover:shadow-[0_0_25px_rgba(99, 102, 241, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="machine-learning data-science open-source" style="--hover-color: rgba(16, 185, 129, 0.4); animation-delay: 0.30000000000000004s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Google Solution Challenge</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=FA" alt="FairAI Pro" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                🧪 Research Prototype
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight leading-tight">FairAI Pro</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            Bias detection and mitigation platform for ML datasets with explainability. Built for Google Solution Challenge 2026 to ensure ethical AI deployment.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Bias Detection</li><li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Explainable AI (XAI)</li><li class="text-[11px] text-gray-400 truncate"><span class="text-emerald-500 mr-2">✦</span>Dataset Auditing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>🐍</span> Python</span><span class="tech-pill"><span>⚙️</span> Flask</span><span class="tech-pill"><span>📊</span> Machine Learning</span><span class="tech-pill"><span>🐼</span> Pandas</span><span class="tech-pill"><span>🔬</span> Scikit-Learn</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/FairAI-Pro" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://fair-ai-pro.vercel.app/" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-emerald-600/20 border border-emerald-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(16, 185, 129, 0.4)] hover:bg-emerald-600/40 hover:shadow-[0_0_25px_rgba(16, 185, 129, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="premium-card grid-item stagger-in group flex flex-col h-full" data-category="machine-learning data-science" style="--hover-color: rgba(59, 130, 246, 0.4); animation-delay: 0.35000000000000003s;">
+                    <div class="h-44 relative overflow-hidden bg-[#0a0f1c]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05070d] to-transparent z-10"></div>
+                        <div class="absolute top-3 left-3 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+                            <span class="inline-block px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[9px] font-bold tracking-wider uppercase shadow-[0_0_8px_rgba(0,0,0,0.1)] backdrop-blur-sm">Data Science Core</span>
+                        </div>
+                        <img loading="lazy" src="https://placehold.co/800x600/151822/2a3143?text=CFD" alt="Credit Card Fraud Detection" class="premium-card-img w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        
+                        <!-- Project Status Badge -->
+                        <div class="mb-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold tracking-widest uppercase border border-white/20 bg-white/5 text-white/90">
+                                📊 Machine Learning Project
+                            </span>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight leading-tight">Credit Card Fraud Detection</h3>
+                        </div>
+                        <p class="text-gray-400 text-[12px] leading-[1.6] mb-3 flex-grow font-light line-clamp-3">
+                            ML project detecting fraudulent transactions using SMOTE, Random Forest, and XGBoost on real-world highly imbalanced credit card data.
+                        </p>
+                        
+                        <!-- Project Highlights Mini (Reduced Height/Visuals) -->
+                        <div class="mb-3 bg-white/[0.01] rounded p-2.5 border border-white/[0.03]">
+                            <ul class="space-y-1">
+                                <li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>SMOTE Balancing</li><li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>Random Forest</li><li class="text-[11px] text-gray-400 truncate"><span class="text-blue-500 mr-2">✦</span>XGBoost</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="tech-pill"><span>🐍</span> Python</span><span class="tech-pill"><span>🔬</span> Scikit-learn</span><span class="tech-pill"><span>📊</span> Machine Learning</span>
+                        </div>
+                        
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <div class="flex flex-col sm:flex-row gap-2.5 w-full">
+                                
+        <a href="https://github.com/sujith0466/Credit_card_fraud_detection" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium hover:bg-white/10 transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code
+        </a>
+        <a href="https://credit-card-fraud-detection-99kl.onrender.com" target="_blank" class="w-full sm:flex-1 inline-flex items-center gap-1.5 px-4 py-3 md:py-2 rounded-full bg-blue-600/20 border border-blue-500/50 text-white text-xs font-medium shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] hover:bg-blue-600/40 hover:shadow-[0_0_25px_rgba(59, 130, 246, 0.4)] transition-all justify-center min-h-[44px] md:min-h-[36px]">
+            Live
+        </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div class="mt-20 text-center relative z-10">
+                <a href="https://github.com/sujith0466" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full text-white font-medium bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] min-h-[44px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    Explore More on GitHub
                 </a>
             </div>
 
         </div>
     </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="relative z-20 pt-16 pb-24 bg-gradient-to-b from-transparent to-[#05070d]">
+<section id="experience" class="relative z-20 pt-16 pb-24 bg-gradient-to-b from-transparent to-[#05070d]">
         <div class="max-w-7xl mx-auto px-6">
             <h3 class="text-xs font-semibold tracking-widest text-textMuted uppercase mb-3 ml-1">Work</h3>
             <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">My <span
@@ -2748,6 +3246,93 @@
         link.addEventListener('click', () => {
             mobileMenu.classList.add('opacity-0', 'pointer-events-none');
             setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+        });
+    });
+    // Premium Carousel Logic
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const carouselContainer = document.getElementById('featured-carousel');
+    
+    let currentSlide = 0;
+    let autoplayInterval;
+    const autoplayDelay = 6000;
+
+    function goToSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        currentSlide = (index + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function startAutoplay() {
+        if(autoplayInterval) clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(nextSlide, autoplayDelay);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    if(slides.length > 0) {
+        prevBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); }); 
+        nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+        
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                goToSlide(idx);
+                startAutoplay();
+            });
+        });
+
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+        
+        // Swipe logic
+        let touchStartX = 0;
+        carouselContainer.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+        carouselContainer.addEventListener('touchend', e => {
+            let touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) { nextSlide(); startAutoplay(); }
+            if (touchEndX - touchStartX > 50) { prevSlide(); startAutoplay(); }
+        });
+
+        startAutoplay();
+    }
+
+    // Grid Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.getAttribute('data-filter');
+            
+            gridItems.forEach((item, index) => {
+                // Animate out
+                item.classList.remove('stagger-in');
+                item.style.animationDelay = '0s';
+                
+                if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                    item.classList.remove('hide');
+                    // Force reflow
+                    void item.offsetWidth;
+                    item.style.animationDelay = `${index * 0.05}s`;
+                    item.classList.add('stagger-in');
+                } else {
+                    item.classList.add('hide');
+                }
+            });
         });
     });
 </script>
