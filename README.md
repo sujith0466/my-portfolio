@@ -52,6 +52,8 @@ Welcome to my personal portfolio repository! My portfolio is engineered to act a
 
 🏅 **Shortlisted among 1,000 builders** selected from over **10,000+ applicants worldwide**.
 
+⭐ **Overall Evaluation Score: 88/100**
+
 </div>
 
 <br/>
@@ -61,27 +63,53 @@ Welcome to my personal portfolio repository! My portfolio is engineered to act a
 <a id="featured-projects"></a>
 ## 💻 Featured Projects
 
-### 🧠 FlowMind AI
-**AI-Powered Multi-Agent Productivity Operating System**
+### 🧠 DeadlineOS (🟢 Production Ready)
+**AI-Powered Autonomous Productivity Operating System**
+An intelligent platform featuring planning, digital twin simulation, rescue intelligence, goal management, document intelligence, and multi-agent orchestration for personal productivity.
+* **Tech Stack:** React, TypeScript, Flask, PostgreSQL, Gemini AI, Google AI Studio, Tailwind CSS
+* **Awards:** Google Agent Labs Hackathon 2026, Vibe2Ship Challenge
+* 🔗 [Live Demo](https://dead-line-os.vercel.app) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/DeadLine-OS)
+
+<br/>
+
+### 🤖 FlowMind AI (🏆 OpenAI Hackathon Project)
+**AI-Powered Multi-Agent Productivity Platform**
 An intelligent multi-agent platform orchestrating specialized AI agents to automate workflows, generate execution plans, summarize information, and help users transition rapidly from ideas to execution.
 * **Tech Stack:** React, Flask, Supabase, Gemini AI, Tailwind CSS, Framer Motion
+* **Awards:** OpenAI x Outskill Shortlist (Score: 88/100)
 * 🔗 [Live Demo](https://flowmind-ai-six.vercel.app) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/Flowmind_AI)
 
 <br/>
 
-### ⚖️ FairAI Pro
+### 🩺 CareSync AI (🚧 Active Development)
+**Next-Generation Healthcare Companion AI**
+Predictive diagnostics, seamless integration with IoT wearables, and intelligent triaging. Includes encrypted health vaults and smart tracking capabilities.
+* **Tech Stack:** React, Python, Deep Learning, AWS, React Native
+* *Status: Premium Prototype • Coming Soon*
+
+<br/>
+
+### 🗳️ VoteWise-AI (🏆 PromptWars Challenge 2)
+**AI-Powered Election Awareness Assistant**
+An election intelligence system built for sentiment analysis and deep candidate insights. Features a real-time voter assistance bot.
+* **Tech Stack:** Python, Flask, Gemini AI, JavaScript, Bootstrap
+* 🔗 [Live Demo](https://votewise-ai.onrender.com/) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/votewise-AI)
+
+<br/>
+
+### 🌍 EcoPilot (🏆 PromptWars Challenge 3)
+**Carbon Footprint AI Platform**
+AI-powered carbon footprint awareness platform that helps users calculate, track, and reduce their environmental impact through intelligent recommendations.
+* **Tech Stack:** React, Flask, SQLite, Supabase, Gemini AI, Tailwind CSS
+* 🔗 [Live Demo](https://eco-pilot-ai-wheat.vercel.app/) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/EcoPilot_AI)
+
+<br/>
+
+### ⚖️ FairAI Pro (🧪 Research Prototype)
 **AI Fairness and Bias Detection Platform**
 An ML bias detection and mitigation platform for datasets with rich explainability, created for the Google Solution Challenge 2026.
 * **Tech Stack:** Python, Machine Learning, Data Analytics
 * 🔗 [Live Demo](https://fair-ai-pro.vercel.app/) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/FairAI-Pro)
-
-<br/>
-
-### 🗳️ VoteWise AI
-**AI-Powered Election Awareness Assistant**
-An election intelligence system built for sentiment analysis and deep candidate insights.
-* **Tech Stack:** AI, Sentiment Analysis, Full Stack Web
-* 🔗 [Live Demo](https://votewise-ai.onrender.com/) &nbsp;|&nbsp; 🔗 [GitHub Repository](https://github.com/sujith0466/votewise-AI)
 
 <br/>
 <hr/>
@@ -94,6 +122,7 @@ An election intelligence system built for sentiment analysis and deep candidate 
 <p align="left">
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
 
 ### Frontend
@@ -108,6 +137,7 @@ An election intelligence system built for sentiment analysis and deep candidate 
 <p align="left">
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
   <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
 </p>
 
@@ -147,7 +177,7 @@ An election intelligence system built for sentiment analysis and deep candidate 
 <a id="certifications"></a>
 ## 📜 Certifications & Achievements
 
-* 🏆 **OpenAI x Outskill AI Builders Hackathon** - Shortlisted Candidate (Top 10%)
+* 🏆 **OpenAI x Outskill AI Builders Hackathon** - Shortlisted Candidate (Top 10%) & Evaluation Score 88/100
 * 🎓 **HackerRank Orchestrate May 2026** - AI Agent Builder Participation Certificate
 * 📊 **Power BI Internship Certificate** - Cognifyz Technologies
 * 🚀 **Multiple AI & Data Science Certifications** focused on generative modeling and full stack integration.
